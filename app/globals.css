@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-barlow: 'Barlow', system-ui, sans-serif;
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --brand: #D72C2C;
+  --brand-dark: #B52020;
+  --charcoal: #1E1E1E;
+  --grey-light: #F8F8F8;
+  --grey-border: #E0E0E0;
+  --grey-text: #6B6B6B;
+}
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-inter);
+    color: var(--charcoal);
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-barlow);
+    font-weight: 700;
+    line-height: 1.1;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-brand text-white font-semibold px-6 py-3 rounded-md transition-all duration-200 hover:bg-brand-dark hover:-translate-y-0.5 shadow-red-glow hover:shadow-lg text-base;
+    font-family: var(--font-inter);
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 bg-white text-charcoal font-semibold px-6 py-3 rounded-md border-2 border-charcoal transition-all duration-200 hover:bg-charcoal hover:text-white text-base;
+    font-family: var(--font-inter);
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-1 text-brand font-semibold text-sm transition-colors duration-150 hover:text-brand-dark;
+    font-family: var(--font-inter);
+  }
+  .section-label {
+    @apply text-brand text-xs font-semibold tracking-widest uppercase;
+    font-family: var(--font-inter);
+  }
+  .card {
+    @apply bg-white border border-grey-border rounded-xl p-6 shadow-card transition-all duration-200 hover:shadow-card-hover hover:-translate-y-0.5;
+  }
+  .container-site {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .section-pad {
+    @apply py-16 md:py-20;
+  }
+}
