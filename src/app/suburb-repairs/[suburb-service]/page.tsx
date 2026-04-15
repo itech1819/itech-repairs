@@ -28,12 +28,17 @@ export async function generateMetadata({
     return { title: 'Not Found' }
   }
 
-  // Title target: "{Device} {Service} {Suburb} | 15 Min Repairs | iTech Repairs" ≤60 chars
-  const rawTitle = `${page.device} ${page.service} ${page.suburb} | 15 Min | iTech Repairs`
-  const title = rawTitle.length <= 60 ? rawTitle : `${page.device} ${page.service} ${page.suburb} | iTech Repairs`
+  // Title: keyword + hooks, cascading to fit ≤65 chars (layout template appends " | iTech Repairs")
+  const keyword = `${page.device} ${page.service} ${page.suburb}`
+  const hooks = ['Cheapest Guaranteed', '15-Min Fix']
+  let title = keyword
+  for (const hook of hooks) {
+    const next = `${title} | ${hook}`
+    if (next.length <= 65) title = next
+    else break
+  }
 
-  // Description 140-160 chars
-  const description = `Need ${page.device} ${page.service} in ${page.suburb}? Visit iTech Repairs near ${page.suburb} for fast 15-minute repairs, lifetime warranty and cheapest price guarantee.`
+  const description = `Need ${page.device} ${page.service} in ${page.suburb}? iTech Repairs offers 15-minute on-the-spot repairs, cheapest price guaranteed and lifetime warranty. Walk in today — open 7 days.`
 
   return {
     title,

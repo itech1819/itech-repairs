@@ -7,15 +7,15 @@ import SchemaScript from '@/components/seo/SchemaScript'
 import { primaryLocation } from '@/data'
 
 export const metadata: Metadata = {
-  title: 'iPad Repair Melbourne | Screen, Battery & Charging Port | iTech Repairs',
+  title: 'iPad Repair Melbourne | Cheapest Price Guaranteed',
   description:
-    'iPad screen repair, battery replacement and charging port repair in Melbourne. All iPad, iPad Air, iPad Pro and iPad Mini models. Cheapest price guaranteed with lifetime warranty.',
+    'Need iPad repair in Melbourne? Get screen, battery, charging port & more — 15-minute on-the-spot repairs, lifetime warranty and cheapest price guaranteed. All iPad Air, Pro & Mini models. Open 7 days.',
   alternates: {
     canonical: 'https://www.itechrepairs.com.au/ipad-repair-melbourne',
   },
   openGraph: {
-    title: 'iPad Repair Melbourne | Screen, Battery & Charging Port | iTech Repairs',
-    description: 'iPad screen repair, battery replacement and charging port repair in Melbourne. All iPad, iPad Air, iPad Pro and iPad Mini models. Cheapest price guaranteed with lifetime warranty.',
+    title: 'iPad Repair Melbourne | Cheapest Price Guaranteed | 15-Min On-The-Spot Repairs',
+    description: 'Need iPad repair in Melbourne? Get screen, battery, charging port & more — 15-minute on-the-spot repairs, lifetime warranty and cheapest price guaranteed. All iPad Air, Pro & Mini models. Open 7 days.',
     url: 'https://www.itechrepairs.com.au/ipad-repair-melbourne',
   },
 }

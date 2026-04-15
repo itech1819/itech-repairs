@@ -79,9 +79,17 @@ export async function generateMetadata({
     case 'suburb-device': {
       const s = parsed.suburb
       const deviceName = deviceDisplayNames[parsed.deviceCategory] ?? parsed.deviceCategory
+      const keyword = `${deviceName} Repair ${s.displayName}`
+      const hooks = ['Cheapest Price Guaranteed', '15-Min Fix']
+      let title = keyword
+      for (const hook of hooks) {
+        const next = `${title} | ${hook}`
+        if (next.length <= 65) title = next
+        else break
+      }
       return {
-        title: `${deviceName} Repair ${s.displayName} – Cheapest Phone Repairs | 15 Minute Repairs | Lifetime Warranty`,
-        description: `Looking for ${deviceName} repair near ${s.displayName}? iTech Repairs in Braybrook & Footscray — walk in, no appointment needed. Serving Braybrook, Footscray, Sunshine and surrounding Melbourne suburbs.`,
+        title,
+        description: `Looking for ${deviceName} repair near ${s.displayName}? iTech Repairs offers 15-minute on-the-spot repairs, cheapest price guaranteed and lifetime warranty. Walk in today — open 7 days.`,
         alternates: { canonical: canonicalFromSlug(slug) },
       }
     }
@@ -89,9 +97,12 @@ export async function generateMetadata({
       const s = parsed.suburb
       const r = parsed.repair
       const deviceName = deviceDisplayNames[parsed.deviceCategory] ?? parsed.deviceCategory
+      const keyword = `${deviceName} ${r.displayName} ${s.displayName}`
+      const titleFull = `${keyword} | Cheapest Guaranteed | 15-Min Fix`
+      const titleShort = `${keyword} | Cheapest Guaranteed`
       return {
-        title: `${deviceName} ${r.displayName} near ${s.displayName} | iTech Repairs`,
-        description: `${deviceName} ${r.displayName.toLowerCase()} near ${s.displayName}, Melbourne. Fast, affordable, lifetime warranty. Walk in to Braybrook or Spotswood — no appointment needed.`,
+        title: titleFull.length <= 65 ? titleFull : titleShort.length <= 65 ? titleShort : keyword,
+        description: `Need ${deviceName} ${r.displayName.toLowerCase()} near ${s.displayName}? iTech Repairs offers 15-minute on-the-spot repairs, cheapest price guaranteed and lifetime warranty. Walk in today.`,
         alternates: { canonical: canonicalFromSlug(slug) },
       }
     }

@@ -6,15 +6,15 @@ import { generateRepairShopSchema } from '@/lib/schema'
 import SchemaScript from '@/components/seo/SchemaScript'
 
 export const metadata: Metadata = {
-  title: 'iPhone Repair Cost Melbourne | Full Price Guide 2026',
+  title: { absolute: 'iPhone Repair Cost Melbourne – Full Price Guide | Cheapest Guaranteed | iTech Repairs' },
   description:
-    'iPhone repair cost in Melbourne — see our full price guide for screen repair, battery replacement, charging port and more. Cheapest prices guaranteed with lifetime warranty.',
+    'iPhone repair cost in Melbourne — screen from $79, battery from $69, charging port from $79. Cheapest price guaranteed, 15-minute repairs, lifetime warranty. Walk in today — no booking needed.',
   alternates: {
     canonical: 'https://www.itechrepairs.com.au/iphone-repair-cost',
   },
   openGraph: {
-    title: 'iPhone Repair Cost Melbourne | Full Price Guide 2026',
-    description: 'iPhone repair cost in Melbourne — see our full price guide for screen repair, battery replacement, charging port and more. Cheapest prices guaranteed with lifetime warranty.',
+    title: 'iPhone Repair Cost Melbourne – Full Price Guide | Cheapest Guaranteed | iTech Repairs',
+    description: 'iPhone repair cost in Melbourne — screen from $79, battery from $69, charging port from $79. Cheapest price guaranteed, 15-minute repairs, lifetime warranty. Walk in today.',
     url: 'https://www.itechrepairs.com.au/iphone-repair-cost',
   },
 }
@@ -55,6 +55,22 @@ const priceData = [
   { repair: 'Water Damage Assessment', from: 'Free', turnaround: 'Same day' },
   { repair: 'Speaker Repair', from: '$79', turnaround: '30 minutes' },
   { repair: 'Microphone Repair', from: '$79', turnaround: '30 minutes' },
+]
+
+const screenPriceByModel = [
+  { model: 'iPhone 17 Pro Max / 17 Plus', screen: 'From $179', battery: 'From $89' },
+  { model: 'iPhone 17 / 17 Pro', screen: 'From $159', battery: 'From $89' },
+  { model: 'iPhone 16 Pro Max / 16 Plus', screen: 'From $169', battery: 'From $89' },
+  { model: 'iPhone 16 / 16 Pro', screen: 'From $149', battery: 'From $89' },
+  { model: 'iPhone 15 Pro Max / 15 Plus', screen: 'From $159', battery: 'From $89' },
+  { model: 'iPhone 15 / 15 Pro', screen: 'From $139', battery: 'From $89' },
+  { model: 'iPhone 14 Pro Max / 14 Plus', screen: 'From $149', battery: 'From $89' },
+  { model: 'iPhone 14 / 14 Pro', screen: 'From $129', battery: 'From $89' },
+  { model: 'iPhone 13 series', screen: 'From $109', battery: 'From $79' },
+  { model: 'iPhone 12 series', screen: 'From $99', battery: 'From $79' },
+  { model: 'iPhone 11 / XR', screen: 'From $79', battery: 'From $69' },
+  { model: 'iPhone X / XS / XS Max', screen: 'From $89', battery: 'From $69' },
+  { model: 'iPhone 8 / 8 Plus / SE', screen: 'From $79', battery: 'From $69' },
 ]
 
 export default function IphoneRepairCostPage() {
@@ -161,6 +177,43 @@ export default function IphoneRepairCostPage() {
             </div>
             <p className="text-sm text-charcoal-light mt-4">
               * All prices are starting prices. Final cost depends on your iPhone model and damage extent. Free diagnostic before any repair begins.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Model-by-Model Price Table */}
+      <section className="section-padding">
+        <div className="container-page">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+              iPhone Repair Cost by Model — 2026
+            </h2>
+            <p className="text-charcoal-light text-lg mb-8 leading-relaxed">
+              Prices vary by model because newer iPhones use more expensive OLED displays and have more complex internal assemblies. Here is a model-by-model guide to help you estimate your repair cost.
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-charcoal text-white">
+                    <th className="text-left p-4 rounded-tl-lg">iPhone Model</th>
+                    <th className="text-left p-4">Screen Repair</th>
+                    <th className="text-left p-4 rounded-tr-lg">Battery Replacement</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {screenPriceByModel.map((row, i) => (
+                    <tr key={row.model} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-surface'}>
+                      <td className="p-4 font-medium text-charcoal border-b border-gray-border">{row.model}</td>
+                      <td className="p-4 font-bold text-primary border-b border-gray-border">{row.screen}</td>
+                      <td className="p-4 text-charcoal-light border-b border-gray-border">{row.battery}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-sm text-charcoal-light mt-4">
+              * Starting prices. Walk in for a free diagnostic and firm written quote. All prices include lifetime warranty.
             </p>
           </div>
         </div>

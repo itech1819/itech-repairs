@@ -7,15 +7,15 @@ import SchemaScript from '@/components/seo/SchemaScript'
 import { primaryLocation } from '@/data'
 
 export const metadata: Metadata = {
-  title: 'MacBook Repair Melbourne | Mac, MacBook Air & Pro | Cheapest Price Guaranteed',
+  title: { absolute: 'MacBook Repair Melbourne – Screen, Battery & Keyboard | Cheapest Price | Lifetime Warranty | iTech Repairs' },
   description:
-    'MacBook Air and MacBook Pro repairs in Melbourne. Screen replacement, battery, keyboard, logic board & water damage. All Intel & Apple Silicon models. Free diagnostic. Braybrook & Spotswood.',
+    'MacBook repair in Melbourne — screen replacement, battery, keyboard, logic board & water damage. Cheapest price guaranteed, lifetime warranty, free diagnostic. Walk in Braybrook or Spotswood — open 7 days.',
   alternates: {
     canonical: 'https://www.itechrepairs.com.au/macbook-repair-melbourne',
   },
   openGraph: {
-    title: 'MacBook Repair Melbourne | Mac, MacBook Air & Pro | Cheapest Price Guaranteed',
-    description: 'MacBook Air and MacBook Pro repairs in Melbourne. Screen replacement, battery, keyboard, logic board & water damage. All Intel & Apple Silicon models. Free diagnostic. Braybrook & Spotswood.',
+    title: 'MacBook Repair Melbourne – Screen, Battery & Keyboard | Cheapest Price | Lifetime Warranty | iTech Repairs',
+    description: 'MacBook repair in Melbourne — screen, battery, keyboard, logic board & water damage. Cheapest price guaranteed, lifetime warranty, free diagnostic. Open 7 days.',
     url: 'https://www.itechrepairs.com.au/macbook-repair-melbourne',
   },
 }

@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import type { IphoneServicePage } from '@/data/iphoneServicePages'
 import { business } from '@/data'
+import { iphoneModels } from '@/data/models'
+import { buildRepairPageSlug } from '@/lib/slug'
 
 interface Props {
   page: IphoneServicePage
@@ -155,15 +157,19 @@ export default function IphoneServicePage({ page }: Props) {
         </div>
       </section>
 
-      {/* Model links */}
+      {/* Model links — derived from single source of truth in models.ts */}
       <section className="section-padding bg-gray-surface">
         <div className="container-page">
           <h2 className="text-2xl font-bold text-charcoal mb-4">Book by iPhone Model</h2>
           <p className="text-charcoal-light mb-6">Select your iPhone model for model-specific pricing and availability:</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-            {page.modelLinks.map((m) => (
-              <Link key={m.href} href={m.href} className="card p-4 text-center text-sm font-medium text-charcoal hover:text-primary hover:border-primary transition-colors">
-                {m.label}
+            {iphoneModels.map((model) => (
+              <Link
+                key={model.slug}
+                href={`/${buildRepairPageSlug(model.slug, page.repairSlug)}`}
+                className="card p-4 text-center text-sm font-medium text-charcoal hover:text-primary hover:border-primary transition-colors"
+              >
+                {model.displayName}
               </Link>
             ))}
           </div>

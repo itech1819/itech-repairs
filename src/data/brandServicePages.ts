@@ -10,7 +10,8 @@ export interface BrandServicePageData {
   benefits: { title: string; desc: string }[]
   faqs: { question: string; answer: string }[]
   relatedServices: { label: string; href: string }[]
-  modelLinks: { label: string; href: string }[]
+  /** @deprecated Model links are now generated dynamically in BrandServicePage.tsx from models.ts */
+  modelLinks?: { label: string; href: string }[]
 }
 
 // ─── SAMSUNG ─────────────────────────────────────────────────────────────────

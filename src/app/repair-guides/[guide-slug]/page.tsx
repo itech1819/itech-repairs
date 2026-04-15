@@ -25,8 +25,8 @@ export async function generateMetadata({
   const guide = getRepairGuide(slug)
   if (!guide) return {}
   return {
-    title: `${guide.title} (Melbourne Guide) | iTech Repairs`,
-    description: `${guide.excerpt} iTech Repairs Melbourne — cheapest price guaranteed, lifetime warranty, 15-minute on-the-spot repairs.`,
+    title: `${guide.title} | Melbourne Repair Guide`,
+    description: `${guide.excerpt} Expert repair in Melbourne — cheapest price guaranteed, lifetime warranty and 15-minute on-the-spot service at iTech Repairs.`,
     alternates: { canonical: `https://www.itechrepairs.com.au/repair-guides/${slug}` },
   }
 }

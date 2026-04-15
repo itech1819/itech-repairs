@@ -7,15 +7,15 @@ import SchemaScript from '@/components/seo/SchemaScript'
 import { primaryLocation } from '@/data'
 
 export const metadata: Metadata = {
-  title: 'Google Pixel Repair Melbourne | Screen & Battery | Cheapest Price Guaranteed',
+  title: 'Google Pixel Repair Melbourne | Cheapest Guaranteed',
   description:
-    'Google Pixel screen repair and battery replacement in Melbourne. All Pixel models from Pixel 5 to Pixel 9 Pro. Cheapest price guaranteed, on-the-spot repairs, lifetime warranty. Walk in Braybrook & Spotswood.',
+    'Need Google Pixel repair in Melbourne? Screen, battery, charging port & more — 15-minute on-the-spot repairs, lifetime warranty and cheapest price guaranteed. All Pixel 5 to Pixel 9 Pro. Open 7 days.',
   alternates: {
     canonical: 'https://www.itechrepairs.com.au/google-pixel-repair-melbourne',
   },
   openGraph: {
-    title: 'Google Pixel Repair Melbourne | Screen & Battery | Cheapest Price Guaranteed',
-    description: 'Google Pixel screen repair and battery replacement in Melbourne. All Pixel models from Pixel 5 to Pixel 9 Pro. Cheapest price guaranteed, on-the-spot repairs, lifetime warranty.',
+    title: 'Google Pixel Repair Melbourne | Cheapest Price Guaranteed | 15-Min Fix',
+    description: 'Need Google Pixel repair in Melbourne? Screen, battery, charging port & more — 15-minute on-the-spot repairs, lifetime warranty and cheapest price guaranteed. All Pixel 5 to Pixel 9 Pro. Open 7 days.',
     url: 'https://www.itechrepairs.com.au/google-pixel-repair-melbourne',
   },
 }

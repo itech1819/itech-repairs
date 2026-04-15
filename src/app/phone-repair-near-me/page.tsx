@@ -6,15 +6,15 @@ import { generateRepairShopSchema } from '@/lib/schema'
 import SchemaScript from '@/components/seo/SchemaScript'
 
 export const metadata: Metadata = {
-  title: "Phone Repair Near Me Melbourne | Walk In — No Appointment",
+  title: "Phone Repair Near Me | From $79 | Walk In Today — iTech Repairs",
   description:
-    "Looking for phone repair near you in Melbourne? iTech Repairs in Braybrook and Spotswood offers walk-in iPhone, Samsung and iPad repair. Same-day. Lifetime warranty.",
+    "Phone repair near you in Melbourne's west — iTech Repairs in Braybrook & Spotswood. iPhone, Samsung & iPad fixed from $79 in 15 minutes. No appointment. Open 7 days.",
   alternates: {
     canonical: 'https://www.itechrepairs.com.au/phone-repair-near-me',
   },
   openGraph: {
-    title: "Phone Repair Near Me Melbourne | Walk In — No Appointment",
-    description: "Looking for phone repair near you in Melbourne? iTech Repairs in Braybrook and Spotswood offers walk-in iPhone, Samsung and iPad repair. Same-day. Lifetime warranty.",
+    title: "Phone Repair Near Me | From $79 | Walk In Today — iTech Repairs",
+    description: "Phone repair near you in Melbourne's west — iTech Repairs in Braybrook & Spotswood. iPhone, Samsung & iPad fixed from $79 in 15 minutes. No appointment. Open 7 days.",
     url: 'https://www.itechrepairs.com.au/phone-repair-near-me',
   },
 }

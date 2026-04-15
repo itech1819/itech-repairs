@@ -1,16 +1,25 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
   trailingSlash: false,
   images: {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 31536000,
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    deviceSizes: [390, 640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     remotePatterns: [],
   },
-  experimental: {
-    optimizePackageImports: ['react', 'react-dom'],
+  async headers() {
+    return [
+      {
+        source: '/_next/static/(.*)',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+      {
+        // Static public assets — logo, icons, og images etc.
+        source: '/:file(.*\\.(?:webp|avif|png|jpg|jpeg|svg|ico|woff2|woff))',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+    ]
   },
 
   async redirects() {

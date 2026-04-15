@@ -1,12 +1,47 @@
 import Link from 'next/link'
 import type { BrandServicePageData } from '@/data/brandServicePages'
 import { business } from '@/data'
+import { samsungModels, pixelModels, ipadModels, macbookModels } from '@/data/models'
+import { buildRepairPageSlug } from '@/lib/slug'
+import type { Model } from '@/types'
+
+/** Return the correct model list for this page's brand, derived from models.ts. */
+function getBrandModels(hubHref: string): Model[] {
+  if (hubHref.startsWith('/samsung')) return samsungModels
+  if (hubHref.startsWith('/google-pixel')) return pixelModels
+  if (hubHref.startsWith('/ipad')) return ipadModels
+  if (hubHref.startsWith('/macbook')) return macbookModels
+  return []
+}
+
+/**
+ * Extract the repair slug from the page slug by stripping the brand prefix.
+ * e.g. 'samsung-screen-repair' → 'screen-repair'
+ *      'google-pixel-battery-replacement' → 'battery-replacement'
+ */
+function extractRepairSlug(pageSlug: string, hubHref: string): string {
+  const prefixes: [string, string][] = [
+    ['/samsung-repair', 'samsung-'],
+    ['/google-pixel-repair', 'google-pixel-'],
+    ['/ipad-repair', 'ipad-'],
+    ['/macbook-repair', 'macbook-'],
+  ]
+  for (const [hub, prefix] of prefixes) {
+    if (hubHref.startsWith(hub) && pageSlug.startsWith(prefix)) {
+      return pageSlug.slice(prefix.length)
+    }
+  }
+  return pageSlug
+}
 
 interface Props {
   page: BrandServicePageData
 }
 
 export default function BrandServicePage({ page }: Props) {
+  const brandModels = getBrandModels(page.hubHref)
+  const repairSlug = extractRepairSlug(page.slug, page.hubHref)
+
   return (
     <>
       {/* Breadcrumbs */}
@@ -127,15 +162,19 @@ export default function BrandServicePage({ page }: Props) {
         </div>
       </section>
 
-      {/* Model links */}
+      {/* Model links — derived from single source of truth in models.ts */}
       <section className="section-padding bg-gray-surface">
         <div className="container-page">
           <h2 className="text-2xl font-bold text-charcoal mb-4">Book by Model</h2>
           <p className="text-charcoal-light mb-6">Select your model for model-specific pricing and availability:</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-            {page.modelLinks.map((m) => (
-              <Link key={m.href} href={m.href} className="card p-4 text-center text-sm font-medium text-charcoal hover:text-primary hover:border-primary transition-colors">
-                {m.label}
+            {brandModels.map((model) => (
+              <Link
+                key={model.slug}
+                href={`/${buildRepairPageSlug(model.slug, repairSlug)}`}
+                className="card p-4 text-center text-sm font-medium text-charcoal hover:text-primary hover:border-primary transition-colors"
+              >
+                {model.displayName}
               </Link>
             ))}
           </div>

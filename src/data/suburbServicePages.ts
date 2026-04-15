@@ -20,6 +20,7 @@ export interface SuburbServicePage {
 // ---------------------------------------------------------------------------
 
 const NEARBY: Record<string, string[]> = {
+  burwood: ['Box Hill', 'Camberwell', 'Glen Waverley', 'Hawthorn'],
   braybrook: ['Footscray', 'Sunshine', 'Maidstone', 'Maribyrnong'],
   footscray: ['Braybrook', 'Seddon', 'Yarraville', 'Maidstone'],
   sunshine: ['Braybrook', 'St Albans', 'Deer Park', 'Albion'],
@@ -191,6 +192,12 @@ export const SUBURB_SERVICE_PAGES: SuburbServicePage[] = [
   // ── MacBook Repair (general) ─────────────────────────────────────────────
   entry('MacBook', 'macbook', 'Repair', 'repair', 'Braybrook', 'braybrook', '/macbook-repair-melbourne', '/macbook-repair-melbourne'),
   entry('MacBook', 'macbook', 'Repair', 'repair', 'Footscray', 'footscray', '/macbook-repair-melbourne', '/macbook-repair-melbourne'),
+
+  // ── Burwood ───────────────────────────────────────────────────────────────
+  entry('iPhone', 'iphone', 'Repair', 'repair', 'Burwood', 'burwood', '/iphone-repair-melbourne', '/iphone-repair-melbourne'),
+  entry('iPhone', 'iphone', 'Screen Repair', 'screen-repair', 'Burwood', 'burwood', '/iphone-screen-repair', '/iphone-repair-melbourne'),
+  entry('iPhone', 'iphone', 'Battery Replacement', 'battery-replacement', 'Burwood', 'burwood', '/iphone-battery-replacement', '/iphone-repair-melbourne'),
+  entry('Samsung', 'samsung', 'Screen Repair', 'screen-repair', 'Burwood', 'burwood', '/samsung-screen-repair', '/samsung-repair-melbourne'),
 
   // ── Task 10: New suburb pages ─────────────────────────────────────────────
 

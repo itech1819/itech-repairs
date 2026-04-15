@@ -6,8 +6,8 @@ import SchemaScript from '@/components/seo/SchemaScript'
 import { generateFAQSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Sell My Device Melbourne – Instant Cash for Phones, iPads & MacBooks | iTech Repairs',
-  description: 'Sell your phone, tablet or laptop in Melbourne for instant cash. iTech Repairs buys iPhones, Samsung, iPad, MacBook and more. Walk in to Braybrook or Spotswood today.',
+  title: 'Sell My Phone Melbourne – Instant Cash for iPhones, Samsung & More | iTech Repairs',
+  description: 'Sell your iPhone, Samsung, iPad or MacBook in Melbourne for instant cash. Best prices paid for working, cracked, broken or sealed devices. Walk in today — paid on the spot.',
   alternates: { canonical: 'https://www.itechrepairs.com.au/sell-my-device' },
 }
 

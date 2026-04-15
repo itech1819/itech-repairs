@@ -7,15 +7,15 @@ import SchemaScript from '@/components/seo/SchemaScript'
 import { primaryLocation } from '@/data'
 
 export const metadata: Metadata = {
-  title: 'Apple Watch Repair Melbourne | Screen & Battery Fix | iTech Repairs',
+  title: { absolute: 'Apple Watch Repair Melbourne – Screen, Battery & More | Cheapest Price | Lifetime Warranty | iTech Repairs' },
   description:
-    'Apple Watch screen repair and battery replacement in Melbourne. On-the-spot repairs, cheapest price guaranteed, lifetime warranty. Walk in Braybrook or Spotswood.',
+    'Expert Apple Watch repairs in Melbourne — screen, battery, charging and more. 15-minute on-the-spot repairs, cheapest price guaranteed, lifetime warranty. Walk in Braybrook or Spotswood — no booking needed.',
   alternates: {
     canonical: 'https://www.itechrepairs.com.au/apple-watch-repair-melbourne',
   },
   openGraph: {
-    title: 'Apple Watch Repair Melbourne | Screen & Battery Fix | iTech Repairs',
-    description: 'Apple Watch screen repair and battery replacement in Melbourne. On-the-spot repairs, cheapest price guaranteed, lifetime warranty. Walk in Braybrook or Spotswood.',
+    title: 'Apple Watch Repair Melbourne – Screen, Battery & More | Cheapest Price | Lifetime Warranty | iTech Repairs',
+    description: 'Expert Apple Watch repairs in Melbourne — screen, battery, charging and more. 15-minute repairs, cheapest price guaranteed, lifetime warranty. Walk in today.',
     url: 'https://www.itechrepairs.com.au/apple-watch-repair-melbourne',
   },
 }

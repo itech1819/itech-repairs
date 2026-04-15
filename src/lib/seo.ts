@@ -40,14 +40,16 @@ function deviceSlugToDisplayName(deviceSlug: string): string {
 // ---------------------------------------------------------------------------
 
 /**
- * Builds a meta title capped at maxLen characters, gracefully trimming if needed.
+ * Builds a meta title from ordered parts, fitting within maxLen characters.
+ * Tries the full list first, drops trailing parts until it fits — no truncation with "…".
+ * Target 65 chars: leaves ~15 chars for " | iTech Repairs" appended by the layout template.
  */
-function buildTitle(primary: string, maxLen = 60): string {
-  if (primary.length <= maxLen) return primary
-  // Try dropping " Melbourne"
-  const noCity = primary.replace(' Melbourne', '')
-  if (noCity.length <= maxLen) return noCity
-  return primary.slice(0, maxLen - 1) + '…'
+function buildTitle(parts: string[], maxLen = 65): string {
+  for (let i = parts.length; i > 0; i--) {
+    const candidate = parts.slice(0, i).join(' | ')
+    if (candidate.length <= maxLen) return candidate
+  }
+  return parts[0].slice(0, maxLen)
 }
 
 /**
@@ -56,9 +58,10 @@ function buildTitle(primary: string, maxLen = 60): string {
  * Description: 140–160 chars with keyword + Melbourne + warranty + cheapest price
  */
 export function generateRepairPageMeta(model: Model, repair: RepairService): PageMetadata {
-  const title = buildTitle(`${model.displayName} ${repair.displayName} Melbourne | 15 Min Repair | Lifetime Warranty`)
-  const ogTitle = `${model.displayName} ${repair.displayName} Melbourne | 15 Min Repair | Lifetime Warranty | iTech Repairs`
-  const description = `Need ${model.displayName} ${repair.displayName} in Melbourne? Get 15-minute on-the-spot repairs, lifetime warranty and cheapest price guarantee at iTech Repairs.`
+  const keyword = `${model.displayName} ${repair.displayName} Melbourne`
+  const title = buildTitle([keyword, 'Cheapest Guaranteed', '15-Min Fix'])
+  const ogTitle = `${keyword} | Cheapest Price Guaranteed | 15-Min On-The-Spot Repair | iTech Repairs`
+  const description = `Need ${model.displayName} ${repair.displayName} in Melbourne? Walk in today — 15-minute on-the-spot repairs, lifetime warranty and cheapest price guaranteed at iTech Repairs. Open 7 days.`
   const canonical = `/${buildRepairPageSlug(model.slug, repair.slug)}`
 
   return {
@@ -77,9 +80,10 @@ export function generateRepairPageMeta(model: Model, repair: RepairService): Pag
  * Title: "[Model] Repair Melbourne | Cheapest | iTech Repairs" (≤60 chars)
  */
 export function generateModelHubMeta(model: Model): PageMetadata {
-  const title = buildTitle(`${model.displayName} Repair Melbourne | 15 Min Repairs | iTech Repairs`)
-  const ogTitle = `${model.displayName} Repair Melbourne | Cheapest Price Guaranteed | 15 Min Repairs | iTech Repairs`
-  const description = `Expert ${model.displayName} repair in Melbourne. Screen, battery, charging port & more. Cheapest prices guaranteed, lifetime warranty, 15-minute on-the-spot repairs at iTech Repairs.`
+  const keyword = `${model.displayName} Repair Melbourne`
+  const title = buildTitle([keyword, 'Cheapest Price Guaranteed', 'Open 7 Days'])
+  const ogTitle = `${keyword} | Cheapest Price Guaranteed | 15-Min On-The-Spot Repairs | iTech Repairs`
+  const description = `Need ${model.displayName} repair in Melbourne? Get screen, battery, charging port & more — 15-minute on-the-spot repairs, lifetime warranty and cheapest price guaranteed. Open 7 days.`
   const canonical = `/${buildModelHubSlug(model.slug)}`
 
   return {
@@ -99,9 +103,10 @@ export function generateModelHubMeta(model: Model): PageMetadata {
  */
 export function generateLocationPageMeta(deviceSlug: string, suburb: Suburb): PageMetadata {
   const deviceDisplayName = deviceSlugToDisplayName(deviceSlug)
-  const title = buildTitle(`${deviceDisplayName} Repair ${suburb.displayName} | 15 Min Repairs | iTech Repairs`)
-  const ogTitle = `${deviceDisplayName} Repair ${suburb.displayName} | 15 Min Repairs | Cheapest Price Guaranteed | iTech Repairs`
-  const description = `Looking for ${deviceDisplayName} repair near ${suburb.displayName}? iTech Repairs offers cheapest prices guaranteed, lifetime warranty & 15-minute on-the-spot repairs. Walk in — Braybrook or Spotswood.`
+  const keyword = `${deviceDisplayName} Repair ${suburb.displayName}`
+  const title = buildTitle([keyword, '15-Min Fix', 'Cheapest Guaranteed'])
+  const ogTitle = `${keyword} | 15-Min On-The-Spot Repairs | Cheapest Price Guaranteed | iTech Repairs`
+  const description = `Looking for ${deviceDisplayName} repair near ${suburb.displayName}? iTech Repairs offers 15-minute on-the-spot repairs, cheapest price guaranteed and lifetime warranty. Walk in today — open 7 days.`
   const canonical = `/${deviceSlug}-repair-${suburb.slug}`
 
   return {
@@ -120,15 +125,17 @@ export function generateLocationPageMeta(deviceSlug: string, suburb: Suburb): Pa
  * Title format: [Device] Repair Melbourne | 15 Minute Repairs | iTech Repairs
  */
 export function generateCategoryPageMeta(brand: Brand): PageMetadata {
-  const title = `${brand.categoryDisplayName} | 15 Minute Repairs | iTech Repairs`
-  const description = `Need ${brand.displayName} repair in Melbourne? iTech Repairs provides fast on-the-spot repairs in around 15 minutes. Visit our Braybrook or Spotswood stores for screen, battery and charging port repairs.`
+  const keyword = `${brand.displayName} Repair Melbourne`
+  const title = buildTitle([keyword, 'Cheapest Price Guaranteed', '15-Min Fix'])
+  const ogTitle = `${keyword} | Cheapest Price Guaranteed | 15-Min On-The-Spot Repairs | iTech Repairs`
+  const description = `Need ${brand.displayName} repair in Melbourne? Get screen, battery, charging port & more with 15-minute on-the-spot service, cheapest price guaranteed and lifetime warranty. Open 7 days.`
   const canonical = `/${brand.categoryPageSlug}`
 
   return {
     title,
     description,
     canonical,
-    ogTitle: title,
+    ogTitle,
     ogDescription: description,
     ogImage: business.socialPreview.ogImage,
     robots: 'index, follow',

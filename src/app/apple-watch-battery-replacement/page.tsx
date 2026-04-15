@@ -6,15 +6,15 @@ import { generateRepairShopSchema } from '@/lib/schema'
 import SchemaScript from '@/components/seo/SchemaScript'
 
 export const metadata: Metadata = {
-  title: 'Apple Watch Battery Replacement Melbourne | From $99',
+  title: { absolute: 'Apple Watch Battery Replacement Melbourne – From $99 | 15 Min | Lifetime Warranty | iTech Repairs' },
   description:
-    'Apple Watch battery replacement in Melbourne from $99. Battery draining fast? We replace Apple Watch batteries for all models. Lifetime warranty. Walk in today.',
+    'Apple Watch battery draining fast? Replaced in Melbourne from $99. All Series 5–9, Ultra & SE. 15-minute service, cheapest price guaranteed, lifetime warranty. Walk in Braybrook or Spotswood — no booking needed.',
   alternates: {
     canonical: 'https://www.itechrepairs.com.au/apple-watch-battery-replacement',
   },
   openGraph: {
-    title: 'Apple Watch Battery Replacement Melbourne | From $99',
-    description: 'Apple Watch battery replacement in Melbourne from $99. Battery draining fast? We replace Apple Watch batteries for all models. Lifetime warranty. Walk in today.',
+    title: 'Apple Watch Battery Replacement Melbourne – From $99 | 15 Min | Lifetime Warranty | iTech Repairs',
+    description: 'Apple Watch battery draining fast? Replaced in Melbourne from $99. All Series 5–9, Ultra & SE. 15-minute service, cheapest price guaranteed, lifetime warranty. Walk in today.',
     url: 'https://www.itechrepairs.com.au/apple-watch-battery-replacement',
   },
 }
@@ -70,6 +70,21 @@ const faqs = [
   {
     question: 'Do I need an appointment for battery replacement?',
     answer: 'No appointment needed. Walk in to our Braybrook or Spotswood store any day between 9am and 9pm for on-the-spot battery replacement.',
+    category: 'general',
+  },
+  {
+    question: 'How much does Apple Watch battery replacement cost at Apple vs a repair shop?',
+    answer: 'Apple charges $109–$189 AUD for Apple Watch battery service depending on the model, and typically requires sending the watch in for 3–7 days. iTech Repairs charges from $99 with a 30–45 minute walk-in service and a lifetime warranty — compared to Apple\'s 90-day warranty.',
+    category: 'general',
+  },
+  {
+    question: 'Can I replace my Apple Watch battery myself?',
+    answer: 'Apple Watch batteries are not user-replaceable. The watch uses adhesive seals and proprietary screws that require specialist tools to open without damage. DIY attempts frequently crack the screen or damage the internal components. Professional replacement is strongly recommended.',
+    category: 'general',
+  },
+  {
+    question: 'Will replacing the battery affect my Apple Watch water resistance?',
+    answer: 'At iTech Repairs, we re-seal the Apple Watch with appropriate adhesive after battery replacement. However, Apple Watch water resistance ratings (IP6X, WR50) are only certified for the original factory seal. We recommend treating the watch as splash-resistant rather than submersible after any battery service — this applies to Apple\'s own battery service too.',
     category: 'general',
   },
 ]
@@ -221,6 +236,78 @@ export default function AppleWatchBatteryReplacementPage() {
             <p className="text-sm text-charcoal-light mt-3">
               * Prices are starting prices. Final price confirmed after free assessment. All prices include lifetime warranty.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* How to Check Apple Watch Battery Health */}
+      <section className="section-padding bg-gray-surface">
+        <div className="container-page">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">
+              How to Check Apple Watch Battery Health
+            </h2>
+            <p className="text-charcoal-light text-lg mb-6 leading-relaxed">
+              Apple Watch shows battery health under Settings. Here is how to check it in under 30 seconds:
+            </p>
+            <ol className="space-y-4 mb-8">
+              {[
+                { step: '1', title: 'Open Settings on your Apple Watch', desc: 'Press the Digital Crown to open the app grid, then tap the Settings icon (the grey gear).' },
+                { step: '2', title: 'Tap Battery', desc: 'Scroll down in Settings and tap Battery to see your current battery percentage.' },
+                { step: '3', title: 'Tap Battery Health', desc: 'Inside Battery, tap Battery Health to see your maximum battery capacity as a percentage.' },
+                { step: '4', title: 'Read your result', desc: 'A healthy Apple Watch battery shows 100%. Below 80% means capacity is significantly reduced and replacement is recommended. Between 80–90% means degradation has started.' },
+              ].map((item) => (
+                <li key={item.step} className="flex items-start gap-4">
+                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white font-bold text-sm flex items-center justify-center">{item.step}</span>
+                  <div>
+                    <p className="font-bold text-charcoal mb-1">{item.title}</p>
+                    <p className="text-sm text-charcoal-light leading-relaxed">{item.desc}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-5">
+              <p className="text-amber-800 text-sm leading-relaxed">
+                <strong>Note:</strong> Battery Health is available on Apple Watch Series 7 and later running watchOS 7.2+. On older models, check battery life through the Workout app or via the iPhone's Watch app under General &gt; Usage &gt; Battery Usage.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Apple vs Third-Party Replacement */}
+      <section className="section-padding">
+        <div className="container-page">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-charcoal mb-6">
+              Apple vs Third-Party Battery Replacement: What's the Difference?
+            </h2>
+            <div className="overflow-x-auto rounded-xl border border-gray-border">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-charcoal text-white">
+                    <th className="text-left p-4 rounded-tl-xl font-semibold">Factor</th>
+                    <th className="p-4 font-semibold text-center">Apple Store</th>
+                    <th className="p-4 rounded-tr-xl font-semibold text-center">iTech Repairs</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-border">
+                  {[
+                    { factor: 'Cost', apple: '$109–$189 AUD', itech: 'From $99' },
+                    { factor: 'Turnaround', apple: '3–7 days (send-in)', itech: '30–45 minutes' },
+                    { factor: 'Walk-in available', apple: 'No (appointment + send-in)', itech: 'Yes — 7 days' },
+                    { factor: 'Warranty', apple: '90 days', itech: 'Lifetime' },
+                    { factor: 'Out-of-warranty cost', apple: 'Full price charged', itech: 'Same price always' },
+                  ].map((row) => (
+                    <tr key={row.factor} className="bg-white hover:bg-gray-surface transition-colors">
+                      <td className="p-4 font-medium text-charcoal">{row.factor}</td>
+                      <td className="p-4 text-center text-charcoal-light">{row.apple}</td>
+                      <td className="p-4 text-center text-primary font-semibold">{row.itech}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>

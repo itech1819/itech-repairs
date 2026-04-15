@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
@@ -68,15 +69,25 @@ export default function RootLayout({
   return (
     <html lang="en-AU" className={inter.variable}>
       <head>
-        {locationSchemas.map((s, i) => (
-          <SchemaScript key={i} schema={s} />
-        ))}
+        {/* Preload above-the-fold logo to improve LCP */}
+        <link rel="preload" href="/logo.png" as="image" type="image/png" />
       </head>
       <body className={`${inter.variable} font-sans`}>
         <Header />
         <main className="pb-16 md:pb-0">{children}</main>
         <Footer />
         <PhoneButton />
+        {/* Location schemas moved to end of body — JSON-LD data, not executable JS,
+            but placing after <main> ensures body renders without waiting for schema generation */}
+        {locationSchemas.map((s, i) => (
+          <SchemaScript key={i} schema={s} />
+        ))}
+        {/* Ahrefs Web Analytics — afterInteractive loads after hydration, non-blocking */}
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="POzHO7tpM7GT4hzY39j5qw"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )

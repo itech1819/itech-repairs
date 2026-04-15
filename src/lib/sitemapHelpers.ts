@@ -92,6 +92,9 @@ export function getCoreEntries(): SitemapEntry[] {
     entry('/phone-repair-spotswood', 0.76),
     entry('/phone-repair-footscray', 0.76),
     entry('/phone-repair-yarraville', 0.76),
+    // New SEO landing pages
+    entry('/apple-repairs-melbourne', 0.85, 'weekly'),
+    entry('/computer-repairs-hoppers-crossing', 0.78, 'weekly'),
   ]
 }
 

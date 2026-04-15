@@ -6,15 +6,15 @@ import { generateRepairShopSchema } from '@/lib/schema'
 import SchemaScript from '@/components/seo/SchemaScript'
 
 export const metadata: Metadata = {
-  title: 'Samsung S23 Ultra Screen Repair Melbourne | From $249',
+  title: { absolute: 'Samsung S23 Ultra Screen Repair Melbourne – From $249 | 15 Min | Lifetime Warranty | iTech Repairs' },
   description:
-    'Samsung S23 Ultra screen repair in Melbourne from $249. AMOLED display replacement with lifetime warranty. Walk in to Braybrook or Spotswood — no appointment needed.',
+    'Samsung S23 Ultra screen smashed? AMOLED display replaced in Melbourne from $249. 15-minute on-the-spot repair, cheapest price guaranteed, lifetime warranty. Walk in Braybrook or Spotswood — no booking needed.',
   alternates: {
     canonical: 'https://www.itechrepairs.com.au/samsung-s23-ultra-screen-repair',
   },
   openGraph: {
-    title: 'Samsung S23 Ultra Screen Repair Melbourne | From $249',
-    description: 'Samsung S23 Ultra screen repair in Melbourne from $249. AMOLED display replacement with lifetime warranty. Walk in to Braybrook or Spotswood — no appointment needed.',
+    title: 'Samsung S23 Ultra Screen Repair Melbourne – From $249 | 15 Min | Lifetime Warranty | iTech Repairs',
+    description: 'Samsung S23 Ultra screen smashed? AMOLED display replaced in Melbourne from $249. 15-minute repair, cheapest price guaranteed, lifetime warranty. Walk in today.',
     url: 'https://www.itechrepairs.com.au/samsung-s23-ultra-screen-repair',
   },
 }

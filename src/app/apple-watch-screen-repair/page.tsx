@@ -6,15 +6,15 @@ import { generateRepairShopSchema } from '@/lib/schema'
 import SchemaScript from '@/components/seo/SchemaScript'
 
 export const metadata: Metadata = {
-  title: 'Apple Watch Screen Repair Melbourne | From $149',
+  title: { absolute: 'Apple Watch Screen Repair Melbourne – From $149 | 15 Min | Lifetime Warranty | iTech Repairs' },
   description:
-    'Apple Watch screen repair in Melbourne from $149. All Series 5-9, Ultra and SE models. On-the-spot repair, lifetime warranty. Walk in Braybrook or Spotswood.',
+    'Apple Watch screen cracked? Repaired in Melbourne from $149. All Series 5–9, Ultra & SE. 15-minute on-the-spot repair, cheapest price guaranteed, lifetime warranty. Walk in Braybrook or Spotswood — no booking needed.',
   alternates: {
     canonical: 'https://www.itechrepairs.com.au/apple-watch-screen-repair',
   },
   openGraph: {
-    title: 'Apple Watch Screen Repair Melbourne | From $149',
-    description: 'Apple Watch screen repair in Melbourne from $149. All Series 5-9, Ultra and SE models. On-the-spot repair, lifetime warranty. Walk in Braybrook or Spotswood.',
+    title: 'Apple Watch Screen Repair Melbourne – From $149 | 15 Min | Lifetime Warranty | iTech Repairs',
+    description: 'Apple Watch screen cracked? Repaired in Melbourne from $149. All Series 5–9, Ultra & SE. 15-minute repair, cheapest price guaranteed, lifetime warranty. Walk in today.',
     url: 'https://www.itechrepairs.com.au/apple-watch-screen-repair',
   },
 }

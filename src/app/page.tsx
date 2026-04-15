@@ -6,14 +6,14 @@ import { generateOrganizationSchema, generateWebsiteSchema } from '@/lib/schema'
 import SchemaScript from '@/components/seo/SchemaScript'
 
 export const metadata: Metadata = {
-  title: { absolute: 'iPhone Repair Melbourne | Cheapest Repairs Guaranteed | Done in 15 Minutes' },
+  title: { absolute: 'Phone Repair Melbourne – Walk In Today | 15 Min Repairs | Cheapest Price | iTech Repairs' },
   description:
-    'Walk-in iPhone & phone repair in Melbourne. Cheapest repairs guaranteed — done in 15 minutes. Screen replacement from $79, battery from $79. Braybrook & Spotswood. Open 7 days.',
+    'Walk in today — no booking needed. iPhone, Samsung, iPad & MacBook repairs in Melbourne done in 15 minutes. Cheapest price guaranteed, lifetime warranty. Screen from $79, battery from $69. Braybrook & Spotswood. Open 7 days.',
   alternates: { canonical: 'https://www.itechrepairs.com.au' },
   openGraph: {
-    title: 'iPhone Repair Melbourne | Cheapest Repairs Guaranteed | Done in 15 Minutes',
+    title: 'Phone Repair Melbourne – Walk In Today | 15 Min Repairs | Cheapest Price | iTech Repairs',
     description:
-      'Walk-in phone, tablet and laptop repairs in Melbourne\'s west. Cheapest prices guaranteed, repairs done in 15 minutes. iPhone, Samsung, MacBook, iPad & more. Open 7 days.',
+      'Walk in today — no booking needed. iPhone, Samsung, iPad & MacBook repairs in Melbourne done in 15 minutes. Cheapest price guaranteed, lifetime warranty. Open 7 days — Braybrook & Spotswood.',
     url: 'https://www.itechrepairs.com.au',
   },
 }

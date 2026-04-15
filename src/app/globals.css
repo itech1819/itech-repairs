@@ -8,7 +8,7 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth removed — was adding layout cost on mobile LCP */
   }
   body {
     @apply text-charcoal bg-white antialiased;
@@ -25,7 +25,12 @@
   .section-padding {
     @apply py-10 md:py-16 lg:py-20;
   }
+  /* transition-shadow removed from base card — applied only where needed to avoid blanket repaint cost */
   .card {
+    @apply bg-white rounded-lg border border-gray-200 shadow-sm;
+  }
+  /* Use .card-interactive for cards that need hover transitions */
+  .card-interactive {
     @apply bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow;
   }
 }

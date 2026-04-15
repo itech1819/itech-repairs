@@ -73,8 +73,8 @@ export const SELL_PAGES: SellPage[] = [
     deviceName: 'iPhone',
     repairLinks: [
       { href: '/iphone-repair-melbourne', label: 'iPhone Repair Melbourne' },
-      { href: '/iphone-screen-replacement-melbourne', label: 'iPhone Screen Repair' },
-      { href: '/iphone-battery-replacement-melbourne', label: 'iPhone Battery Replacement' },
+      { href: '/iphone-screen-replacement', label: 'iPhone Screen Repair' },
+      { href: '/iphone-battery-replacement', label: 'iPhone Battery Replacement' },
     ],
   },
   {
@@ -101,8 +101,8 @@ export const SELL_PAGES: SellPage[] = [
     deviceName: 'Samsung',
     repairLinks: [
       { href: '/samsung-repair-melbourne', label: 'Samsung Repair Melbourne' },
-      { href: '/samsung-s25-ultra-screen-repair-melbourne', label: 'Samsung Screen Repair' },
-      { href: '/samsung-s25-ultra-battery-replacement-melbourne', label: 'Samsung Battery Replacement' },
+      { href: '/samsung-screen-repair', label: 'Samsung Screen Repair' },
+      { href: '/samsung-battery-replacement', label: 'Samsung Battery Replacement' },
     ],
   },
   {
@@ -115,7 +115,7 @@ export const SELL_PAGES: SellPage[] = [
     deviceName: 'iPad',
     repairLinks: [
       { href: '/ipad-repair-melbourne', label: 'iPad Repair Melbourne' },
-      { href: '/ipad-screen-repair-melbourne', label: 'iPad Screen Repair' },
+      { href: '/ipad-screen-repair', label: 'iPad Screen Repair' },
     ],
   },
   {
@@ -128,7 +128,7 @@ export const SELL_PAGES: SellPage[] = [
     deviceName: 'MacBook',
     repairLinks: [
       { href: '/macbook-repair-melbourne', label: 'MacBook Repair Melbourne' },
-      { href: '/macbook-screen-repair-melbourne', label: 'MacBook Screen Repair' },
+      { href: '/macbook-screen-repair', label: 'MacBook Screen Repair' },
     ],
   },
 
@@ -142,8 +142,8 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Get the best price for your iPhone 17 Pro Max in Melbourne. iTech Repairs buys iPhone 17 Pro Max in any condition — perfect, cracked screen, or water-damaged. Walk in to our Braybrook or Spotswood stores for an instant cash offer.',
     deviceName: 'iPhone 17 Pro Max',
     repairLinks: [
-      { href: '/iphone-17-pro-max-repair-melbourne', label: 'iPhone 17 Pro Max Repairs' },
-      { href: '/iphone-17-pro-max-screen-repair-melbourne', label: 'iPhone 17 Pro Max Screen Repair' },
+      { href: '/iphone-repair-melbourne', label: 'iPhone 17 Pro Max Repairs' },
+      { href: '/iphone-screen-repair-melbourne', label: 'iPhone 17 Pro Max Screen Repair' },
     ],
   },
   {
@@ -155,8 +155,8 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Looking to sell your iPhone 17 Pro? iTech Repairs pays top cash for your iPhone 17 Pro regardless of condition. Walk in to Braybrook or Spotswood for an instant quote and same-day payment.',
     deviceName: 'iPhone 17 Pro',
     repairLinks: [
-      { href: '/iphone-17-pro-repair-melbourne', label: 'iPhone 17 Pro Repairs' },
-      { href: '/iphone-17-pro-screen-repair-melbourne', label: 'iPhone 17 Pro Screen Repair' },
+      { href: '/iphone-repair-melbourne', label: 'iPhone 17 Pro Repairs' },
+      { href: '/iphone-screen-repair-melbourne', label: 'iPhone 17 Pro Screen Repair' },
     ],
   },
   {
@@ -168,8 +168,8 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Get instant cash for your iPhone 16 Pro Max in Melbourne. iTech Repairs pays the highest prices for iPhone 16 Pro Max devices — working, cracked, or damaged. Walk in today for an instant offer.',
     deviceName: 'iPhone 16 Pro Max',
     repairLinks: [
-      { href: '/iphone-16-pro-max-repair-melbourne', label: 'iPhone 16 Pro Max Repairs' },
-      { href: '/iphone-16-pro-max-screen-repair-melbourne', label: 'iPhone 16 Pro Max Screen Repair' },
+      { href: '/iphone-repair-melbourne', label: 'iPhone 16 Pro Max Repairs' },
+      { href: '/iphone-screen-repair-melbourne', label: 'iPhone 16 Pro Max Screen Repair' },
     ],
   },
   {
@@ -181,8 +181,8 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Ready to sell your iPhone 15 Pro Max? iTech Repairs pays the highest cash prices for iPhone 15 Pro Max in Melbourne — working, cracked screen, or damaged. Walk in to Braybrook or Spotswood for an instant offer.',
     deviceName: 'iPhone 15 Pro Max',
     repairLinks: [
-      { href: '/iphone-15-pro-max-repair-melbourne', label: 'iPhone 15 Pro Max Repairs' },
-      { href: '/iphone-15-pro-max-screen-repair-melbourne', label: 'iPhone 15 Pro Max Screen Repair' },
+      { href: '/iphone-repair-melbourne', label: 'iPhone 15 Pro Max Repairs' },
+      { href: '/iphone-screen-repair-melbourne', label: 'iPhone 15 Pro Max Screen Repair' },
     ],
   },
   {
@@ -194,8 +194,8 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Looking to sell your Samsung Galaxy S24 Ultra? iTech Repairs pays top cash for S24 Ultra devices in Melbourne — perfect condition, cracked screen, or damaged. Walk in to Braybrook or Spotswood for an instant quote.',
     deviceName: 'Samsung Galaxy S24 Ultra',
     repairLinks: [
-      { href: '/samsung-s24-ultra-repair-melbourne', label: 'Samsung S24 Ultra Repairs' },
-      { href: '/samsung-s24-ultra-screen-repair-melbourne', label: 'Samsung S24 Ultra Screen Repair' },
+      { href: '/samsung-repair-melbourne', label: 'Samsung S24 Ultra Repairs' },
+      { href: '/samsung-s23-ultra-screen-repair', label: 'Samsung S24 Ultra Screen Repair' },
     ],
   },
   {
@@ -207,7 +207,7 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Get the best price for your Samsung Galaxy S23 Ultra in Melbourne. iTech Repairs pays top cash for S23 Ultra devices in any condition — working, cracked, or damaged. Walk in today for an instant cash offer.',
     deviceName: 'Samsung Galaxy S23 Ultra',
     repairLinks: [
-      { href: '/samsung-s23-ultra-repair-melbourne', label: 'Samsung S23 Ultra Repairs' },
+      { href: '/samsung-repair-melbourne', label: 'Samsung S23 Ultra Repairs' },
       { href: '/samsung-repair-melbourne', label: 'Samsung Repair Melbourne' },
     ],
   },
@@ -223,7 +223,7 @@ export const SELL_PAGES: SellPage[] = [
     deviceName: 'Broken iPhone',
     repairLinks: [
       { href: '/iphone-repair-melbourne', label: 'iPhone Repair Melbourne' },
-      { href: '/iphone-screen-replacement-melbourne', label: 'iPhone Screen Repair' },
+      { href: '/iphone-screen-replacement', label: 'iPhone Screen Repair' },
       { href: '/iphone-water-damage-repair-melbourne', label: 'iPhone Water Damage Repair' },
     ],
   },
@@ -236,7 +236,7 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'A cracked screen doesn\'t mean zero value. iTech Repairs pays cash for iPhones with cracked or smashed screens — all models. Walk in to Braybrook or Spotswood for an instant quote. Alternatively, we can repair your screen to boost resale value.',
     deviceName: 'iPhone with Cracked Screen',
     repairLinks: [
-      { href: '/iphone-screen-replacement-melbourne', label: 'iPhone Screen Repair' },
+      { href: '/iphone-screen-replacement', label: 'iPhone Screen Repair' },
       { href: '/iphone-repair-melbourne', label: 'All iPhone Repairs' },
     ],
   },
@@ -372,7 +372,7 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Want cash for your iPhone 17 Pro Max? iTech Repairs pays the highest prices for iPhone 17 Pro Max in Melbourne — brand new, sealed, used, or damaged. Walk in to our Braybrook or Spotswood stores for an instant cash payment. Show us a better price and we\'ll beat it.',
     deviceName: 'iPhone 17 Pro Max',
     repairLinks: [
-      { href: '/iphone-17-pro-max-repair-melbourne', label: 'iPhone 17 Pro Max Repair' },
+      { href: '/iphone-repair-melbourne', label: 'iPhone 17 Pro Max Repair' },
       { href: '/sell-my-iphone-17-pro-max', label: 'Sell My iPhone 17 Pro Max' },
     ],
   },
@@ -443,7 +443,7 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Have a brand new or sealed iPhone 17 Pro Max to sell? iTech Repairs pays the highest prices in Melbourne for brand new iPhone 17 Pro Max — sealed box or open box. Walk in to Braybrook or Spotswood for an instant cash offer. Show us a better price and we\'ll beat it.',
     deviceName: 'Brand New iPhone 17 Pro Max',
     repairLinks: [
-      { href: '/iphone-17-pro-max-repair-melbourne', label: 'iPhone 17 Pro Max Repair' },
+      { href: '/iphone-repair-melbourne', label: 'iPhone 17 Pro Max Repair' },
       { href: '/sell-my-iphone-17-pro-max', label: 'Sell My iPhone 17 Pro Max' },
       { href: '/cash-for-iphone-17-pro-max', label: 'Cash for iPhone 17 Pro Max' },
     ],
@@ -459,7 +459,7 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Get the highest price for your iPhone 16 Pro Max in Melbourne. iTech Repairs buys iPhone 16 Pro Max in all conditions — perfect, cracked screen, water-damaged, or not working. Walk in to our Braybrook or Spotswood stores for an instant cash offer.',
     deviceName: 'iPhone 16 Pro Max',
     repairLinks: [
-      { href: '/iphone-16-pro-max-repair-melbourne', label: 'iPhone 16 Pro Max Repairs' },
+      { href: '/iphone-repair-melbourne', label: 'iPhone 16 Pro Max Repairs' },
       { href: '/sell-my-iphone', label: 'Sell My iPhone' },
     ],
   },
@@ -472,7 +472,7 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Looking to sell your iPhone 16 Plus? iTech Repairs pays competitive cash for iPhone 16 Plus in Melbourne — working, cracked screen, or damaged. Walk in to Braybrook or Spotswood for an instant quote.',
     deviceName: 'iPhone 16 Plus',
     repairLinks: [
-      { href: '/iphone-16-plus-repair-melbourne', label: 'iPhone 16 Plus Repairs' },
+      { href: '/iphone-repair-melbourne', label: 'iPhone 16 Plus Repairs' },
       { href: '/sell-my-iphone', label: 'Sell My iPhone' },
     ],
   },
@@ -485,7 +485,7 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Get the best price for your iPhone 15 Pro Max in Melbourne. iTech Repairs buys iPhone 15 Pro Max — working, cracked, water-damaged, or not turning on. Walk in to our Braybrook or Spotswood stores for an immediate cash offer.',
     deviceName: 'iPhone 15 Pro Max',
     repairLinks: [
-      { href: '/iphone-15-pro-max-repair-melbourne', label: 'iPhone 15 Pro Max Repairs' },
+      { href: '/iphone-repair-melbourne', label: 'iPhone 15 Pro Max Repairs' },
       { href: '/sell-my-iphone', label: 'Sell My iPhone' },
     ],
   },
@@ -498,7 +498,7 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Want to sell your iPhone 15 Plus? iTech Repairs pays fair cash for iPhone 15 Plus in Melbourne regardless of condition. Walk in to Braybrook or Spotswood for an instant quote.',
     deviceName: 'iPhone 15 Plus',
     repairLinks: [
-      { href: '/iphone-15-plus-repair-melbourne', label: 'iPhone 15 Plus Repairs' },
+      { href: '/iphone-repair-melbourne', label: 'iPhone 15 Plus Repairs' },
       { href: '/sell-my-iphone', label: 'Sell My iPhone' },
     ],
   },
@@ -511,7 +511,7 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Selling your iPhone 14 Pro Max? iTech Repairs pays instant cash for iPhone 14 Pro Max in Melbourne — any condition, any storage. Walk in to Braybrook or Spotswood for a fast, fair cash offer.',
     deviceName: 'iPhone 14 Pro Max',
     repairLinks: [
-      { href: '/iphone-14-pro-max-repair-melbourne', label: 'iPhone 14 Pro Max Repairs' },
+      { href: '/iphone-repair-melbourne', label: 'iPhone 14 Pro Max Repairs' },
       { href: '/sell-my-iphone', label: 'Sell My iPhone' },
     ],
   },
@@ -524,7 +524,7 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Ready to sell your iPhone 14 Plus? iTech Repairs pays competitive cash prices for iPhone 14 Plus in Melbourne. Walk in to our Braybrook or Spotswood stores for an instant offer with same-day payment.',
     deviceName: 'iPhone 14 Plus',
     repairLinks: [
-      { href: '/iphone-14-plus-repair-melbourne', label: 'iPhone 14 Plus Repairs' },
+      { href: '/iphone-repair-melbourne', label: 'iPhone 14 Plus Repairs' },
       { href: '/sell-my-iphone', label: 'Sell My iPhone' },
     ],
   },
@@ -537,7 +537,7 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Get instant cash for your iPhone 13 Pro Max in Melbourne. iTech Repairs pays fair market prices for iPhone 13 Pro Max regardless of condition. Walk in to our Braybrook or Spotswood stores today.',
     deviceName: 'iPhone 13 Pro Max',
     repairLinks: [
-      { href: '/iphone-13-pro-max-repair-melbourne', label: 'iPhone 13 Pro Max Repairs' },
+      { href: '/iphone-repair-melbourne', label: 'iPhone 13 Pro Max Repairs' },
       { href: '/sell-my-iphone', label: 'Sell My iPhone' },
     ],
   },
@@ -550,7 +550,7 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Looking to sell your iPhone 12 Pro Max? iTech Repairs pays cash for iPhone 12 Pro Max in Melbourne — working, cracked screen, or damaged. Walk in to our stores for an instant quote.',
     deviceName: 'iPhone 12 Pro Max',
     repairLinks: [
-      { href: '/iphone-12-pro-max-repair-melbourne', label: 'iPhone 12 Pro Max Repairs' },
+      { href: '/iphone-repair-melbourne', label: 'iPhone 12 Pro Max Repairs' },
       { href: '/sell-my-iphone', label: 'Sell My iPhone' },
     ],
   },
@@ -563,7 +563,7 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Want to sell your iPhone 12 Pro? iTech Repairs pays competitive cash prices for iPhone 12 Pro in Melbourne — working, cracked, or damaged. Walk in to Braybrook or Spotswood for an instant offer.',
     deviceName: 'iPhone 12 Pro',
     repairLinks: [
-      { href: '/iphone-12-pro-repair-melbourne', label: 'iPhone 12 Pro Repairs' },
+      { href: '/iphone-repair-melbourne', label: 'iPhone 12 Pro Repairs' },
       { href: '/sell-my-iphone', label: 'Sell My iPhone' },
     ],
   },
@@ -792,7 +792,7 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Get the best price for your iPhone 16 Pro in Melbourne. iTech Repairs buys iPhone 16 Pro in any condition — perfect, cracked screen, water-damaged, or not working. Walk in to our Braybrook or Spotswood stores for an instant cash offer.',
     deviceName: 'iPhone 16 Pro',
     repairLinks: [
-      { href: '/iphone-16-pro-repair-melbourne', label: 'iPhone 16 Pro Repairs' },
+      { href: '/iphone-repair-melbourne', label: 'iPhone 16 Pro Repairs' },
       { href: '/sell-my-iphone', label: 'Sell My iPhone' },
     ],
   },
@@ -805,7 +805,7 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Want to sell your iPhone 16? iTech Repairs pays top cash for iPhone 16 in Melbourne — working, cracked screen, or damaged. Walk in to our Braybrook or Spotswood stores for an instant quote and same-day payment.',
     deviceName: 'iPhone 16',
     repairLinks: [
-      { href: '/iphone-16-repair-melbourne', label: 'iPhone 16 Repairs' },
+      { href: '/iphone-repair-melbourne', label: 'iPhone 16 Repairs' },
       { href: '/sell-my-iphone', label: 'Sell My iPhone' },
     ],
   },
@@ -818,7 +818,7 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Looking to sell your iPhone 15 Pro? iTech Repairs pays great cash for iPhone 15 Pro in Melbourne regardless of condition. Walk in to Braybrook or Spotswood for an instant offer and same-day payment.',
     deviceName: 'iPhone 15 Pro',
     repairLinks: [
-      { href: '/iphone-15-pro-repair-melbourne', label: 'iPhone 15 Pro Repairs' },
+      { href: '/iphone-repair-melbourne', label: 'iPhone 15 Pro Repairs' },
       { href: '/sell-my-iphone', label: 'Sell My iPhone' },
     ],
   },
@@ -831,7 +831,7 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Get the best price for your iPhone 15 in Melbourne. iTech Repairs pays top cash for iPhone 15 — working, cracked, or damaged. Walk in to our stores in Braybrook or Spotswood for an instant offer.',
     deviceName: 'iPhone 15',
     repairLinks: [
-      { href: '/iphone-15-repair-melbourne', label: 'iPhone 15 Repairs' },
+      { href: '/iphone-repair-melbourne', label: 'iPhone 15 Repairs' },
       { href: '/sell-my-iphone', label: 'Sell My iPhone' },
     ],
   },
@@ -844,7 +844,7 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Ready to sell your iPhone 14 Pro? iTech Repairs pays instant cash for iPhone 14 Pro in Melbourne — any condition, any storage. Walk in to Braybrook or Spotswood for a fast, fair cash offer.',
     deviceName: 'iPhone 14 Pro',
     repairLinks: [
-      { href: '/iphone-14-pro-repair-melbourne', label: 'iPhone 14 Pro Repairs' },
+      { href: '/iphone-repair-melbourne', label: 'iPhone 14 Pro Repairs' },
       { href: '/sell-my-iphone', label: 'Sell My iPhone' },
     ],
   },
@@ -857,7 +857,7 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Selling your iPhone 14? iTech Repairs pays competitive cash prices for iPhone 14 in Melbourne — working, cracked screen, or damaged. Walk in for an instant offer.',
     deviceName: 'iPhone 14',
     repairLinks: [
-      { href: '/iphone-14-repair-melbourne', label: 'iPhone 14 Repairs' },
+      { href: '/iphone-repair-melbourne', label: 'iPhone 14 Repairs' },
       { href: '/sell-my-iphone', label: 'Sell My iPhone' },
     ],
   },
@@ -870,7 +870,7 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Get instant cash for your iPhone 13 Pro in Melbourne. iTech Repairs pays fair market prices for iPhone 13 Pro regardless of condition — working, cracked, or damaged. Walk in to our Braybrook or Spotswood stores today.',
     deviceName: 'iPhone 13 Pro',
     repairLinks: [
-      { href: '/iphone-13-pro-repair-melbourne', label: 'iPhone 13 Pro Repairs' },
+      { href: '/iphone-repair-melbourne', label: 'iPhone 13 Pro Repairs' },
       { href: '/sell-my-iphone', label: 'Sell My iPhone' },
     ],
   },
@@ -883,7 +883,7 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Looking to sell your iPhone 13? iTech Repairs pays cash for iPhone 13 in Melbourne — all conditions, all storage sizes. Walk in to our Braybrook or Spotswood stores for an instant quote.',
     deviceName: 'iPhone 13',
     repairLinks: [
-      { href: '/iphone-13-repair-melbourne', label: 'iPhone 13 Repairs' },
+      { href: '/iphone-repair-melbourne', label: 'iPhone 13 Repairs' },
       { href: '/sell-my-iphone', label: 'Sell My iPhone' },
     ],
   },
@@ -896,7 +896,7 @@ export const SELL_PAGES: SellPage[] = [
     intro: 'Want to sell your iPhone 12? iTech Repairs pays competitive cash prices for iPhone 12 in Melbourne — working, cracked screen, or damaged. Walk in today for an instant offer.',
     deviceName: 'iPhone 12',
     repairLinks: [
-      { href: '/iphone-12-repair-melbourne', label: 'iPhone 12 Repairs' },
+      { href: '/iphone-repair-melbourne', label: 'iPhone 12 Repairs' },
       { href: '/sell-my-iphone', label: 'Sell My iPhone' },
     ],
   },

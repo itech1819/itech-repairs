@@ -6,15 +6,15 @@ import { generateRepairShopSchema } from '@/lib/schema'
 import SchemaScript from '@/components/seo/SchemaScript'
 
 export const metadata: Metadata = {
-  title: 'iPhone Battery Replacement Cost Melbourne | From $69',
+  title: { absolute: 'iPhone Battery Replacement Cost – 2026 Price Guide Melbourne | From $69 | iTech Repairs' },
   description:
-    'iPhone battery replacement cost in Melbourne from $69. All models. 15 minute service, lifetime warranty. See our full price guide and book today.',
+    'iPhone battery replacement cost in Melbourne: iPhone 15/14 from $89, iPhone 13/12 from $79, iPhone 11/X from $69. All models, 15-minute service, lifetime warranty. Walk in — no booking needed.',
   alternates: {
     canonical: 'https://www.itechrepairs.com.au/iphone-battery-replacement-cost',
   },
   openGraph: {
-    title: 'iPhone Battery Replacement Cost Melbourne | From $69',
-    description: 'iPhone battery replacement cost in Melbourne from $69. All models. 15 minute service, lifetime warranty. See our full price guide and book today.',
+    title: 'iPhone Battery Replacement Cost – 2026 Price Guide Melbourne | From $69 | iTech Repairs',
+    description: 'iPhone battery replacement cost in Melbourne: iPhone 15/14 from $89, iPhone 13/12 from $79, iPhone 11/X from $69. Cheapest price guaranteed + lifetime warranty.',
     url: 'https://www.itechrepairs.com.au/iphone-battery-replacement-cost',
   },
 }

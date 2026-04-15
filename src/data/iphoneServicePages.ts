@@ -8,7 +8,8 @@ export interface IphoneServicePage {
   benefits: { title: string; desc: string }[]
   faqs: { question: string; answer: string }[]
   relatedServices: { label: string; href: string }[]
-  modelLinks: { label: string; href: string }[]
+  /** @deprecated Model links are now generated dynamically in IphoneServicePage.tsx from models.ts */
+  modelLinks?: { label: string; href: string }[]
   repairSlug: string
 }
 
@@ -19,9 +20,9 @@ export const IPHONE_SERVICE_PAGES: IphoneServicePage[] = [
   {
     slug: 'iphone-screen-repair',
     repairSlug: 'screen-repair',
-    metaTitle: 'iPhone Screen Repair Melbourne | Cheapest Price Guaranteed | 15 Minutes',
+    metaTitle: 'iPhone Screen Repair Melbourne | From $79 | Done in 15 Minutes',
     metaDescription:
-      'iPhone screen repair in Melbourne done in 15 minutes. Cheapest price guaranteed with lifetime warranty. All iPhone models from iPhone 6 to iPhone 17. Walk in today.',
+      'Cracked iPhone screen? Walk in to iTech Repairs — screen replaced in 15 minutes from $79. Cheapest price guaranteed, lifetime warranty. Braybrook & Spotswood. Open 7 days.',
     h1: 'iPhone Screen Repair Melbourne',
     intro:
       'Cracked or damaged your iPhone screen? iTech Repairs fixes all iPhone models — from iPhone 6 to iPhone 17 Pro Max — from just $79. Walk into our Braybrook or Spotswood stores any time for an on the spot screen repair, usually completed in just 15 minutes. Every screen repair comes with a lifetime warranty on parts and labour.',

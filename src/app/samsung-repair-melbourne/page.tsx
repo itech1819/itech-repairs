@@ -7,15 +7,15 @@ import SchemaScript from '@/components/seo/SchemaScript'
 import { primaryLocation } from '@/data'
 
 export const metadata: Metadata = {
-  title: 'Samsung Repair Melbourne | Screen, Battery & Charging Port | Cheapest Price Guaranteed',
+  title: { absolute: 'Samsung Repair Melbourne – 15 Min Repairs | Cheapest Price | Lifetime Warranty | iTech Repairs' },
   description:
-    'Samsung Galaxy screen repair, battery replacement and more in Melbourne. All S, A, Z Fold and Z Flip models. Cheapest price guaranteed, on-the-spot repairs, lifetime warranty.',
+    'Samsung repair in Melbourne — screen, battery, charging port & more. Walk in today, no booking needed. 15-minute on-the-spot repairs, cheapest price guaranteed, lifetime warranty. Galaxy S, A, Z Fold & Z Flip. Braybrook & Spotswood.',
   alternates: {
     canonical: 'https://www.itechrepairs.com.au/samsung-repair-melbourne',
   },
   openGraph: {
-    title: 'Samsung Repair Melbourne | Screen, Battery & Charging Port | Cheapest Price Guaranteed',
-    description: 'Samsung Galaxy screen repair, battery replacement and more in Melbourne. All S, A, Z Fold and Z Flip models. Cheapest price guaranteed, on-the-spot repairs, lifetime warranty.',
+    title: 'Samsung Repair Melbourne – 15 Min Repairs | Cheapest Price | Lifetime Warranty | iTech Repairs',
+    description: 'Samsung repair in Melbourne — screen, battery, charging port & more. Walk in today, no booking needed. 15-minute repairs, cheapest price guaranteed, lifetime warranty.',
     url: 'https://www.itechrepairs.com.au/samsung-repair-melbourne',
   },
 }

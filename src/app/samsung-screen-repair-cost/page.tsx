@@ -6,15 +6,15 @@ import { generateRepairShopSchema } from '@/lib/schema'
 import SchemaScript from '@/components/seo/SchemaScript'
 
 export const metadata: Metadata = {
-  title: 'Samsung Screen Repair Cost Melbourne | Price Guide',
+  title: { absolute: 'Samsung Screen Repair Cost Melbourne – From $89 | Cheapest Guaranteed | Lifetime Warranty | iTech Repairs' },
   description:
-    'Samsung screen repair cost in Melbourne — full price guide for Galaxy S, A and Z series. From $89. Cheapest price guaranteed with lifetime warranty.',
+    'Samsung screen repair cost in Melbourne — Galaxy S, A and Z series from $89. Cheapest price guaranteed, 15-minute repairs where possible, lifetime warranty. Walk in today — no booking needed.',
   alternates: {
     canonical: 'https://www.itechrepairs.com.au/samsung-screen-repair-cost',
   },
   openGraph: {
-    title: 'Samsung Screen Repair Cost Melbourne | Price Guide',
-    description: 'Samsung screen repair cost in Melbourne — full price guide for Galaxy S, A and Z series. From $89. Cheapest price guaranteed with lifetime warranty.',
+    title: 'Samsung Screen Repair Cost Melbourne – From $89 | Cheapest Guaranteed | Lifetime Warranty | iTech Repairs',
+    description: 'Samsung screen repair cost in Melbourne — Galaxy S, A and Z series from $89. Cheapest price guaranteed, 15-minute repairs, lifetime warranty. Walk in today.',
     url: 'https://www.itechrepairs.com.au/samsung-screen-repair-cost',
   },
 }
@@ -28,6 +28,16 @@ const faqs = [
     category: 'pricing',
   },
   {
+    question: 'How much does it cost to fix a Samsung Galaxy S23 screen in Australia?',
+    answer: 'Samsung Galaxy S23 screen repair at iTech Repairs starts from $99. The S23 Ultra costs slightly more due to its larger 6.8-inch Dynamic AMOLED 2X display. Walk in for a free assessment and firm quote.',
+    category: 'pricing',
+  },
+  {
+    question: 'Is it worth repairing a cracked Samsung screen?',
+    answer: 'In most cases, yes. A Samsung Galaxy S or A series screen repair typically costs $89–$149 — significantly cheaper than buying a new phone that costs $400–$1,500+. If the rest of your phone is in good condition, screen repair is almost always the right call.',
+    category: 'pricing',
+  },
+  {
     question: 'Why are Samsung Z Fold screen repairs more expensive?',
     answer: 'The Samsung Galaxy Z Fold uses a specialised flexible OLED display that is more complex and expensive to replace than a standard flat display. The inner foldable screen requires precise handling and higher-cost parts.',
     category: 'pricing',
@@ -38,8 +48,13 @@ const faqs = [
     category: 'pricing',
   },
   {
-    question: 'Is there a warranty on Samsung screen repair?',
-    answer: 'Yes — every Samsung screen repair at iTech Repairs comes with a lifetime warranty on parts and labour. If the same screen fault returns, we fix it for free.',
+    question: 'Does iTech Repairs fix Samsung screens with a lifetime warranty?',
+    answer: 'Yes — every Samsung screen repair at iTech Repairs comes with a lifetime warranty on parts and labour. If the same screen fault returns, we fix it for free. No time limits.',
+    category: 'pricing',
+  },
+  {
+    question: 'Can you repair just the glass on a Samsung without replacing the whole screen?',
+    answer: 'On most modern Samsung Galaxy phones, the glass is fused to the OLED display assembly. Separating the glass-only on AMOLED screens is high-risk and can damage the display. We always recommend a full screen assembly replacement for the best result and reliability.',
     category: 'pricing',
   },
 ]
@@ -167,8 +182,31 @@ export default function SamsungScreenRepairCostPage() {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* What Affects Samsung Screen Cost */}
       <section className="section-padding bg-gray-surface">
+        <div className="container-page">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-charcoal mb-6">
+              What Affects Samsung Screen Repair Cost?
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {[
+                { title: 'Model & Series', desc: 'Galaxy A-series screens are more affordable than Galaxy S-series. Pro and Ultra models with larger curved AMOLED displays cost more due to parts.' },
+                { title: 'Display Type', desc: 'Standard AMOLED, Dynamic AMOLED 2X, and flexible OLED (Z Fold / Z Flip) all have different costs. The quality and rarity of the panel affects the part price.' },
+                { title: 'Damage Extent', desc: 'A cracked screen with a functioning display costs less than a screen with dead pixels, touch failure, or backlight damage. Our free diagnostic identifies all issues before we quote.' },
+              ].map((item) => (
+                <div key={item.title} className="card p-5">
+                  <h3 className="font-bold text-charcoal mb-2">{item.title}</h3>
+                  <p className="text-sm text-charcoal-light leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section-padding">
         <div className="container-page">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
