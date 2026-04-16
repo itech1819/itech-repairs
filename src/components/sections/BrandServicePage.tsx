@@ -14,33 +14,12 @@ function getBrandModels(hubHref: string): Model[] {
   return []
 }
 
-/**
- * Extract the repair slug from the page slug by stripping the brand prefix.
- * e.g. 'samsung-screen-repair' → 'screen-repair'
- *      'google-pixel-battery-replacement' → 'battery-replacement'
- */
-function extractRepairSlug(pageSlug: string, hubHref: string): string {
-  const prefixes: [string, string][] = [
-    ['/samsung-repair', 'samsung-'],
-    ['/google-pixel-repair', 'google-pixel-'],
-    ['/ipad-repair', 'ipad-'],
-    ['/macbook-repair', 'macbook-'],
-  ]
-  for (const [hub, prefix] of prefixes) {
-    if (hubHref.startsWith(hub) && pageSlug.startsWith(prefix)) {
-      return pageSlug.slice(prefix.length)
-    }
-  }
-  return pageSlug
-}
-
 interface Props {
   page: BrandServicePageData
 }
 
 export default function BrandServicePage({ page }: Props) {
   const brandModels = getBrandModels(page.hubHref)
-  const repairSlug = extractRepairSlug(page.slug, page.hubHref)
 
   return (
     <>
@@ -171,7 +150,7 @@ export default function BrandServicePage({ page }: Props) {
             {brandModels.map((model) => (
               <Link
                 key={model.slug}
-                href={`/${buildRepairPageSlug(model.slug, repairSlug)}`}
+                href={`/${buildRepairPageSlug(model.slug, page.repairSlug)}`}
                 className="card p-4 text-center text-sm font-medium text-charcoal hover:text-primary hover:border-primary transition-colors"
               >
                 {model.displayName}

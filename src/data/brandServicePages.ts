@@ -2,6 +2,8 @@ export interface BrandServicePageData {
   slug: string
   hubHref: string
   hubLabel: string
+  /** Canonical repair slug used to build model-specific repair page hrefs */
+  repairSlug: string
   metaTitle: string
   metaDescription: string
   h1: string
@@ -10,30 +12,9 @@ export interface BrandServicePageData {
   benefits: { title: string; desc: string }[]
   faqs: { question: string; answer: string }[]
   relatedServices: { label: string; href: string }[]
-  /** @deprecated Model links are now generated dynamically in BrandServicePage.tsx from models.ts */
-  modelLinks?: { label: string; href: string }[]
 }
 
 // ─── SAMSUNG ─────────────────────────────────────────────────────────────────
-
-const samsungModelLinks = (repairSlug: string) => [
-  { label: 'Galaxy S26 Ultra', href: `/samsung-s26-ultra-${repairSlug}-melbourne` },
-  { label: 'Galaxy S26+', href: `/samsung-s26-plus-${repairSlug}-melbourne` },
-  { label: 'Galaxy S26', href: `/samsung-s26-${repairSlug}-melbourne` },
-  { label: 'Galaxy S25 Ultra', href: `/samsung-s25-ultra-${repairSlug}-melbourne` },
-  { label: 'Galaxy S25+', href: `/samsung-s25-plus-${repairSlug}-melbourne` },
-  { label: 'Galaxy S25', href: `/samsung-s25-${repairSlug}-melbourne` },
-  { label: 'Galaxy S24 Ultra', href: `/samsung-s24-ultra-${repairSlug}-melbourne` },
-  { label: 'Galaxy S24+', href: `/samsung-s24-plus-${repairSlug}-melbourne` },
-  { label: 'Galaxy S24', href: `/samsung-s24-${repairSlug}-melbourne` },
-  { label: 'Galaxy S23 Ultra', href: `/samsung-s23-ultra-${repairSlug}-melbourne` },
-  { label: 'Galaxy S23+', href: `/samsung-s23-plus-${repairSlug}-melbourne` },
-  { label: 'Galaxy S23', href: `/samsung-s23-${repairSlug}-melbourne` },
-  { label: 'Galaxy Z Fold 6', href: `/samsung-z-fold-6-${repairSlug}-melbourne` },
-  { label: 'Galaxy Z Flip 6', href: `/samsung-z-flip-6-${repairSlug}-melbourne` },
-  { label: 'Galaxy A55', href: `/samsung-a55-${repairSlug}-melbourne` },
-  { label: 'Galaxy A54', href: `/samsung-a54-${repairSlug}-melbourne` },
-]
 
 const samsungRelated = (exclude: string) => [
   { label: 'Samsung Screen Repair', href: '/samsung-screen-repair' },
@@ -50,21 +31,6 @@ const samsungRelated = (exclude: string) => [
 
 // ─── PIXEL ────────────────────────────────────────────────────────────────────
 
-const pixelModelLinks = (repairSlug: string) => [
-  { label: 'Pixel 10 Pro XL', href: `/pixel-10-pro-xl-${repairSlug}-melbourne` },
-  { label: 'Pixel 10 Pro', href: `/pixel-10-pro-${repairSlug}-melbourne` },
-  { label: 'Pixel 10', href: `/pixel-10-${repairSlug}-melbourne` },
-  { label: 'Pixel 9a', href: `/pixel-9a-${repairSlug}-melbourne` },
-  { label: 'Pixel 9 Pro XL', href: `/pixel-9-pro-xl-${repairSlug}-melbourne` },
-  { label: 'Pixel 9 Pro', href: `/pixel-9-pro-${repairSlug}-melbourne` },
-  { label: 'Pixel 9', href: `/pixel-9-${repairSlug}-melbourne` },
-  { label: 'Pixel 8 Pro', href: `/pixel-8-pro-${repairSlug}-melbourne` },
-  { label: 'Pixel 8', href: `/pixel-8-${repairSlug}-melbourne` },
-  { label: 'Pixel 7 Pro', href: `/pixel-7-pro-${repairSlug}-melbourne` },
-  { label: 'Pixel 7', href: `/pixel-7-${repairSlug}-melbourne` },
-  { label: 'Pixel 6a', href: `/pixel-6a-${repairSlug}-melbourne` },
-]
-
 const pixelRelated = (exclude: string) => [
   { label: 'Google Pixel Screen Repair', href: '/google-pixel-screen-repair' },
   { label: 'Google Pixel Battery Replacement', href: '/google-pixel-battery-replacement' },
@@ -77,20 +43,6 @@ const pixelRelated = (exclude: string) => [
 
 // ─── IPAD ─────────────────────────────────────────────────────────────────────
 
-const ipadModelLinks = (repairSlug: string) => [
-  { label: 'iPad Pro 13" (M5)', href: `/ipad-pro-13-m5-${repairSlug}-melbourne` },
-  { label: 'iPad Pro 11" (M5)', href: `/ipad-pro-11-m5-${repairSlug}-melbourne` },
-  { label: 'iPad Air 13" (M4)', href: `/ipad-air-13-m4-${repairSlug}-melbourne` },
-  { label: 'iPad Air 11" (M4)', href: `/ipad-air-11-m4-${repairSlug}-melbourne` },
-  { label: 'iPad Pro 13" (M4)', href: `/ipad-pro-13-m4-${repairSlug}-melbourne` },
-  { label: 'iPad Pro 11" (M4)', href: `/ipad-pro-11-m4-${repairSlug}-melbourne` },
-  { label: 'iPad mini 7', href: `/ipad-mini-7-${repairSlug}-melbourne` },
-  { label: 'iPad 11th Gen', href: `/ipad-11th-gen-${repairSlug}-melbourne` },
-  { label: 'iPad 10th Gen', href: `/ipad-10th-gen-${repairSlug}-melbourne` },
-  { label: 'iPad 9th Gen', href: `/ipad-9th-gen-${repairSlug}-melbourne` },
-  { label: 'iPad mini 6', href: `/ipad-mini-6-${repairSlug}-melbourne` },
-]
-
 const ipadRelated = (exclude: string) => [
   { label: 'iPad Screen Repair', href: '/ipad-screen-repair' },
   { label: 'iPad Battery Replacement', href: '/ipad-battery-replacement' },
@@ -102,17 +54,6 @@ const ipadRelated = (exclude: string) => [
 ].filter(s => !s.href.includes(exclude))
 
 // ─── MACBOOK ──────────────────────────────────────────────────────────────────
-
-const macbookModelLinks = (repairSlug: string) => [
-  { label: 'MacBook Air 15" M5', href: `/macbook-air-15-m5-${repairSlug}-melbourne` },
-  { label: 'MacBook Air 13" M5', href: `/macbook-air-13-m5-${repairSlug}-melbourne` },
-  { label: 'MacBook Pro 16" M5 Max', href: `/macbook-pro-16-m5-max-${repairSlug}-melbourne` },
-  { label: 'MacBook Pro 14" M5', href: `/macbook-pro-14-m5-${repairSlug}-melbourne` },
-  { label: 'MacBook Air 15" M4', href: `/macbook-air-15-m4-${repairSlug}-melbourne` },
-  { label: 'MacBook Air 13" M4', href: `/macbook-air-13-m4-${repairSlug}-melbourne` },
-  { label: 'MacBook Air 15" M3', href: `/macbook-air-15-m3-${repairSlug}-melbourne` },
-  { label: 'MacBook Air 13" M3', href: `/macbook-air-13-m3-${repairSlug}-melbourne` },
-]
 
 const macbookRelated = (exclude: string) => [
   { label: 'MacBook Screen Repair', href: '/macbook-screen-repair' },
@@ -133,6 +74,7 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
   {
     slug: 'samsung-screen-repair',
     hubHref: '/samsung-repair-melbourne',
+    repairSlug: 'screen-repair',
     hubLabel: 'Samsung Repair Melbourne',
     metaTitle: 'Samsung Screen Repair Melbourne | On The Spot 15 Min | iTech Repairs',
     metaDescription: 'Samsung screen repair Melbourne. AMOLED display specialists for all Galaxy models. On the spot 15 minute repairs. Lifetime warranty. Cheapest price guaranteed.',
@@ -160,12 +102,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'Do I need an appointment?', answer: 'No appointment needed. Walk into our Braybrook or Spotswood store any time during business hours, 7 days a week 9am–9pm.' },
     ],
     relatedServices: samsungRelated('samsung-screen-repair'),
-    modelLinks: samsungModelLinks('screen-repair'),
   },
 
   {
     slug: 'samsung-battery-replacement',
     hubHref: '/samsung-repair-melbourne',
+    repairSlug: 'battery-replacement',
     hubLabel: 'Samsung Repair Melbourne',
     metaTitle: 'Samsung Battery Replacement Melbourne | 15 Min On The Spot | iTech Repairs',
     metaDescription: 'Samsung battery replacement Melbourne. Fast 15 minute service for all Galaxy models. Restore full charge capacity. Lifetime warranty. Cheapest price guaranteed.',
@@ -192,12 +134,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'Can you replace a swollen Samsung battery safely?', answer: 'Yes. We safely remove swollen batteries using proper heat and extraction tools. Do not delay — a swollen battery can damage the screen and chassis if left untreated.' },
     ],
     relatedServices: samsungRelated('samsung-battery-replacement'),
-    modelLinks: samsungModelLinks('battery-replacement'),
   },
 
   {
     slug: 'samsung-charging-port-repair',
     hubHref: '/samsung-repair-melbourne',
+    repairSlug: 'charging-port-repair',
     hubLabel: 'Samsung Repair Melbourne',
     metaTitle: 'Samsung Charging Port Repair Melbourne | Fast Walk-In | iTech Repairs',
     metaDescription: 'Samsung charging port repair Melbourne. USB-C port cleaning and replacement for all Galaxy models. On the spot 15 minute service. Lifetime warranty guaranteed.',
@@ -223,12 +165,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'How long does Samsung charging port repair take?', answer: 'Cleaning takes 10–15 minutes. Full port replacement takes around 20–30 minutes depending on the model.' },
     ],
     relatedServices: samsungRelated('samsung-charging-port-repair'),
-    modelLinks: samsungModelLinks('charging-port-repair'),
   },
 
   {
     slug: 'samsung-back-glass-repair',
     hubHref: '/samsung-repair-melbourne',
+    repairSlug: 'back-glass-repair',
     hubLabel: 'Samsung Repair Melbourne',
     metaTitle: 'Samsung Back Glass Repair Melbourne | On The Spot | iTech Repairs',
     metaDescription: 'Samsung back glass repair Melbourne. Cracked rear panel replacement for all Galaxy S series. On the spot 15 minute service. Lifetime warranty. Cheapest price guaranteed.',
@@ -253,12 +195,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'How long does Samsung back glass repair take?', answer: 'Most back glass replacements take 15 minutes on the spot. Z Fold and Z Flip models may take 30–45 minutes.' },
     ],
     relatedServices: samsungRelated('samsung-back-glass-repair'),
-    modelLinks: samsungModelLinks('back-glass-repair'),
   },
 
   {
     slug: 'samsung-camera-repair',
     hubHref: '/samsung-repair-melbourne',
+    repairSlug: 'camera-repair',
     hubLabel: 'Samsung Repair Melbourne',
     metaTitle: 'Samsung Camera Repair Melbourne | All Galaxy Models | iTech Repairs',
     metaDescription: 'Samsung camera repair Melbourne. Fix blurry, black, or cracked camera lens on all Galaxy models. On the spot service. Lifetime warranty. Cheapest price guaranteed.',
@@ -284,12 +226,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'Will my Samsung camera quality be the same after repair?', answer: 'Yes. We use quality replacement parts matched to Samsung\'s specifications, and we verify photo quality, autofocus, and video performance before returning your device.' },
     ],
     relatedServices: samsungRelated('samsung-camera-repair'),
-    modelLinks: samsungModelLinks('camera-repair'),
   },
 
   {
     slug: 'samsung-speaker-repair',
     hubHref: '/samsung-repair-melbourne',
+    repairSlug: 'speaker-repair',
     hubLabel: 'Samsung Repair Melbourne',
     metaTitle: 'Samsung Speaker Repair Melbourne | Earpiece & Loudspeaker | iTech Repairs',
     metaDescription: 'Samsung speaker repair Melbourne. Fix muffled, distorted, or silent speakers on all Galaxy models. On the spot 15 min service. Lifetime warranty guaranteed.',
@@ -314,12 +256,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'How long does Samsung speaker repair take?', answer: 'Speaker cleaning takes 10–15 minutes. Full speaker replacement takes 15–20 minutes on the spot.' },
     ],
     relatedServices: samsungRelated('samsung-speaker-repair'),
-    modelLinks: samsungModelLinks('speaker-repair'),
   },
 
   {
     slug: 'samsung-microphone-repair',
     hubHref: '/samsung-repair-melbourne',
+    repairSlug: 'microphone-replacement',
     hubLabel: 'Samsung Repair Melbourne',
     metaTitle: 'Samsung Microphone Repair Melbourne | Galaxy All Models | iTech Repairs',
     metaDescription: 'Samsung microphone repair Melbourne. Fix muffled calls, failed voice assistant, and video audio issues. On the spot service. Lifetime warranty. Walk in today.',
@@ -344,12 +286,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'How long does Samsung microphone repair take?', answer: 'Most microphone replacements take 15–20 minutes on the spot.' },
     ],
     relatedServices: samsungRelated('samsung-microphone-repair'),
-    modelLinks: samsungModelLinks('microphone-replacement'),
   },
 
   {
     slug: 'samsung-water-damage-repair',
     hubHref: '/samsung-repair-melbourne',
+    repairSlug: 'water-damage-repair',
     hubLabel: 'Samsung Repair Melbourne',
     metaTitle: 'Samsung Water Damage Repair Melbourne | Urgent Service | iTech Repairs',
     metaDescription: 'Samsung water damage repair Melbourne. Ultrasonic board cleaning, corrosion removal, data recovery. All Galaxy models. Act fast for best results. Lifetime warranty.',
@@ -376,12 +318,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'How long does Samsung water damage repair take?', answer: 'Initial assessment takes 20–30 minutes. Full cleaning and repair takes 2–4 hours. Complex cases with component replacement may take longer.' },
     ],
     relatedServices: samsungRelated('samsung-water-damage-repair'),
-    modelLinks: samsungModelLinks('water-damage-repair'),
   },
 
   {
     slug: 'samsung-free-device-inspection',
     hubHref: '/samsung-repair-melbourne',
+    repairSlug: 'inspection',
     hubLabel: 'Samsung Repair Melbourne',
     metaTitle: 'Free Samsung Device Inspection Melbourne | Walk In | iTech Repairs',
     metaDescription: 'Free Samsung device inspection in Melbourne. We check screen, battery, cameras, speakers, charging, and more. No charge, no obligation. Walk in today.',
@@ -407,12 +349,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'Can you check if a second-hand Samsung is locked?', answer: 'Yes. We check for Samsung account lock (previously Find My Mobile), carrier lock status, and overall device health before you commit to a purchase.' },
     ],
     relatedServices: samsungRelated('samsung-free-device-inspection'),
-    modelLinks: samsungModelLinks('diagnostic'),
   },
 
   {
     slug: 'samsung-insurance-damage-report',
     hubHref: '/samsung-repair-melbourne',
+    repairSlug: 'insurance-report',
     hubLabel: 'Samsung Repair Melbourne',
     metaTitle: 'Samsung Insurance Damage Report Melbourne | Same Visit | iTech Repairs',
     metaDescription: 'Professional Samsung insurance damage reports in Melbourne. Written assessments for all Galaxy models accepted by all major Australian insurers. Walk in today.',
@@ -437,7 +379,6 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'How much does the insurance damage report cost?', answer: 'There is a small fee for the written report. Please walk in or call us for current pricing. The assessment itself is performed at the time of the report.' },
     ],
     relatedServices: samsungRelated('samsung-insurance-damage-report'),
-    modelLinks: samsungModelLinks('diagnostic'),
   },
 
   // ═══ GOOGLE PIXEL ═══════════════════════════════════════════════════════════
@@ -445,6 +386,7 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
   {
     slug: 'google-pixel-screen-repair',
     hubHref: '/google-pixel-repair-melbourne',
+    repairSlug: 'screen-repair',
     hubLabel: 'Google Pixel Repair Melbourne',
     metaTitle: 'Google Pixel Screen Repair Melbourne | 15 Min On The Spot | iTech Repairs',
     metaDescription: 'Google Pixel screen repair Melbourne. All Pixel models. OLED display specialists. On the spot 15 minute service. Lifetime warranty. Cheapest price guaranteed.',
@@ -469,12 +411,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'How much does a Pixel screen repair cost?', answer: 'Pricing varies by model. Walk in for a free assessment and quote. We guarantee the cheapest price in Melbourne.' },
     ],
     relatedServices: pixelRelated('google-pixel-screen-repair'),
-    modelLinks: pixelModelLinks('screen-repair'),
   },
 
   {
     slug: 'google-pixel-battery-replacement',
     hubHref: '/google-pixel-repair-melbourne',
+    repairSlug: 'battery-replacement',
     hubLabel: 'Google Pixel Repair Melbourne',
     metaTitle: 'Google Pixel Battery Replacement Melbourne | Fast 15 Min | iTech Repairs',
     metaDescription: 'Google Pixel battery replacement Melbourne. Restore full charge capacity on all Pixel models. On the spot 15 minute service. Lifetime warranty guaranteed.',
@@ -499,12 +441,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'How long does Pixel battery replacement take?', answer: 'Most Pixel battery replacements take 15 minutes on the spot. Walk in any time 7 days 9am–9pm.' },
     ],
     relatedServices: pixelRelated('google-pixel-battery-replacement'),
-    modelLinks: pixelModelLinks('battery-replacement'),
   },
 
   {
     slug: 'google-pixel-charging-port-repair',
     hubHref: '/google-pixel-repair-melbourne',
+    repairSlug: 'charging-port-repair',
     hubLabel: 'Google Pixel Repair Melbourne',
     metaTitle: 'Google Pixel Charging Port Repair Melbourne | Walk In | iTech Repairs',
     metaDescription: 'Google Pixel charging port repair Melbourne. USB-C port cleaning and replacement for all Pixel models. On the spot service. Lifetime warranty guaranteed.',
@@ -527,12 +469,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'How long does Pixel charging port repair take?', answer: 'Cleaning: 10–15 minutes. Full replacement: 20–30 minutes on the spot.' },
     ],
     relatedServices: pixelRelated('google-pixel-charging-port-repair'),
-    modelLinks: pixelModelLinks('charging-port-repair'),
   },
 
   {
     slug: 'google-pixel-camera-repair',
     hubHref: '/google-pixel-repair-melbourne',
+    repairSlug: 'camera-repair',
     hubLabel: 'Google Pixel Repair Melbourne',
     metaTitle: 'Google Pixel Camera Repair Melbourne | All Pixel Models | iTech Repairs',
     metaDescription: 'Google Pixel camera repair Melbourne. Fix blurry photos, cracked lens, black viewfinder on all Pixel models. Preserve Night Sight and computational photography.',
@@ -556,12 +498,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'How long does Pixel camera repair take?', answer: 'Lens replacement: 15–20 minutes. Full camera module: 30–45 minutes on the spot.' },
     ],
     relatedServices: pixelRelated('google-pixel-camera-repair'),
-    modelLinks: pixelModelLinks('camera-repair'),
   },
 
   {
     slug: 'google-pixel-water-damage-repair',
     hubHref: '/google-pixel-repair-melbourne',
+    repairSlug: 'water-damage-repair',
     hubLabel: 'Google Pixel Repair Melbourne',
     metaTitle: 'Google Pixel Water Damage Repair Melbourne | Urgent | iTech Repairs',
     metaDescription: 'Google Pixel water damage repair Melbourne. Professional ultrasonic cleaning, corrosion removal, data recovery for all Pixel models. Act fast. Lifetime warranty.',
@@ -585,12 +527,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'How long does Pixel water damage repair take?', answer: 'Initial assessment: 20–30 minutes. Full cleaning and component repair: 2–4 hours depending on damage extent.' },
     ],
     relatedServices: pixelRelated('google-pixel-water-damage-repair'),
-    modelLinks: pixelModelLinks('water-damage-repair'),
   },
 
   {
     slug: 'google-pixel-free-device-inspection',
     hubHref: '/google-pixel-repair-melbourne',
+    repairSlug: 'inspection',
     hubLabel: 'Google Pixel Repair Melbourne',
     metaTitle: 'Free Google Pixel Device Inspection Melbourne | Walk In | iTech Repairs',
     metaDescription: 'Free Google Pixel inspection in Melbourne. We check screen, battery, cameras, speakers, and all functions. No charge, no obligation. Walk in any time.',
@@ -613,12 +555,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'How long does the Pixel inspection take?', answer: '10–15 minutes for a standard check. Complex diagnostics may take up to 30 minutes.' },
     ],
     relatedServices: pixelRelated('google-pixel-free-device-inspection'),
-    modelLinks: pixelModelLinks('diagnostic'),
   },
 
   {
     slug: 'google-pixel-insurance-damage-report',
     hubHref: '/google-pixel-repair-melbourne',
+    repairSlug: 'insurance-report',
     hubLabel: 'Google Pixel Repair Melbourne',
     metaTitle: 'Google Pixel Insurance Damage Report Melbourne | iTech Repairs',
     metaDescription: 'Professional Google Pixel insurance damage reports Melbourne. Written assessments for all Pixel models accepted by all major Australian insurers. Walk in today.',
@@ -640,7 +582,6 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'How quickly can I get my Pixel insurance report?', answer: 'Most reports ready within 24–48 hours. Express same-day reports available on request.' },
     ],
     relatedServices: pixelRelated('google-pixel-insurance-damage-report'),
-    modelLinks: pixelModelLinks('diagnostic'),
   },
 
   // ═══ IPAD ════════════════════════════════════════════════════════════════════
@@ -648,6 +589,7 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
   {
     slug: 'ipad-screen-repair',
     hubHref: '/ipad-repair-melbourne',
+    repairSlug: 'screen-repair',
     hubLabel: 'iPad Repair Melbourne',
     metaTitle: 'iPad Screen Repair Melbourne | All iPad Models | iTech Repairs',
     metaDescription: 'iPad screen repair Melbourne. All iPad models including Pro, Air, mini. On the spot service. Lifetime warranty. Cheapest price guaranteed. Walk in today.',
@@ -673,12 +615,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'Will my iPad work with an Apple Pencil after screen repair?', answer: 'Yes. We verify Apple Pencil compatibility as part of our post-repair testing process for all iPad models that support it.' },
     ],
     relatedServices: ipadRelated('ipad-screen-repair'),
-    modelLinks: ipadModelLinks('screen-repair'),
   },
 
   {
     slug: 'ipad-battery-replacement',
     hubHref: '/ipad-repair-melbourne',
+    repairSlug: 'battery-replacement',
     hubLabel: 'iPad Repair Melbourne',
     metaTitle: 'iPad Battery Replacement Melbourne | All iPad Models | iTech Repairs',
     metaDescription: 'iPad battery replacement Melbourne. Restore full charge capacity on all iPad models. Same-day service available. Lifetime warranty. Cheapest price guaranteed.',
@@ -703,12 +645,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'What if my iPad battery is swollen?', answer: 'Stop charging your iPad immediately and bring it in. Swollen batteries risk display damage and should be replaced urgently. We handle swollen batteries safely.' },
     ],
     relatedServices: ipadRelated('ipad-battery-replacement'),
-    modelLinks: ipadModelLinks('battery-replacement'),
   },
 
   {
     slug: 'ipad-charging-port-repair',
     hubHref: '/ipad-repair-melbourne',
+    repairSlug: 'charging-port-repair',
     hubLabel: 'iPad Repair Melbourne',
     metaTitle: 'iPad Charging Port Repair Melbourne | USB-C & Lightning | iTech Repairs',
     metaDescription: 'iPad charging port repair Melbourne. USB-C and Lightning port cleaning and replacement for all iPad models. Walk-in service. Lifetime warranty guaranteed.',
@@ -731,12 +673,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'How long does iPad charging port repair take?', answer: 'Cleaning: 15 minutes. Full replacement: 45–60 minutes depending on the iPad model.' },
     ],
     relatedServices: ipadRelated('ipad-charging-port-repair'),
-    modelLinks: ipadModelLinks('charging-port-repair'),
   },
 
   {
     slug: 'ipad-camera-repair',
     hubHref: '/ipad-repair-melbourne',
+    repairSlug: 'camera-repair',
     hubLabel: 'iPad Repair Melbourne',
     metaTitle: 'iPad Camera Repair Melbourne | All iPad Models | iTech Repairs',
     metaDescription: 'iPad camera repair Melbourne. Fix blurry, black, or cracked camera on all iPad models. Rear and front camera replacement. Lifetime warranty guaranteed.',
@@ -760,12 +702,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'Can you repair the front FaceTime camera on an iPad?', answer: 'Yes. We repair both rear and front-facing iPad cameras for all current and recent models.' },
     ],
     relatedServices: ipadRelated('ipad-camera-repair'),
-    modelLinks: ipadModelLinks('camera-repair'),
   },
 
   {
     slug: 'ipad-water-damage-repair',
     hubHref: '/ipad-repair-melbourne',
+    repairSlug: 'water-damage-repair',
     hubLabel: 'iPad Repair Melbourne',
     metaTitle: 'iPad Water Damage Repair Melbourne | Urgent Service | iTech Repairs',
     metaDescription: 'iPad water damage repair Melbourne. Professional ultrasonic cleaning, corrosion removal for all iPad models. Act fast for best results. Lifetime warranty.',
@@ -788,12 +730,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'How long does iPad water damage repair take?', answer: 'Initial assessment: 20–30 minutes. Full cleaning and repair: 2–6 hours depending on damage severity.' },
     ],
     relatedServices: ipadRelated('ipad-water-damage-repair'),
-    modelLinks: ipadModelLinks('water-damage-repair'),
   },
 
   {
     slug: 'ipad-free-device-inspection',
     hubHref: '/ipad-repair-melbourne',
+    repairSlug: 'inspection',
     hubLabel: 'iPad Repair Melbourne',
     metaTitle: 'Free iPad Device Inspection Melbourne | Walk In | iTech Repairs',
     metaDescription: 'Free iPad inspection in Melbourne. We check screen, battery, cameras, Touch ID, charging port, and more. No charge, no obligation. Walk in today.',
@@ -815,12 +757,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'Can you check if a second-hand iPad is iCloud locked?', answer: 'Yes. We check iCloud Activation Lock status, verify battery health, and assess overall condition.' },
     ],
     relatedServices: ipadRelated('ipad-free-device-inspection'),
-    modelLinks: ipadModelLinks('diagnostic'),
   },
 
   {
     slug: 'ipad-insurance-damage-report',
     hubHref: '/ipad-repair-melbourne',
+    repairSlug: 'insurance-report',
     hubLabel: 'iPad Repair Melbourne',
     metaTitle: 'iPad Insurance Damage Report Melbourne | iTech Repairs',
     metaDescription: 'Professional iPad insurance damage reports Melbourne. Written assessments for all iPad models accepted by all major Australian insurers. Walk in today.',
@@ -840,7 +782,6 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'How quickly can I get my iPad insurance report?', answer: 'Most reports ready within 24–48 hours. Express same-day available on request.' },
     ],
     relatedServices: ipadRelated('ipad-insurance-damage-report'),
-    modelLinks: ipadModelLinks('diagnostic'),
   },
 
   // ═══ MACBOOK ═════════════════════════════════════════════════════════════════
@@ -848,6 +789,7 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
   {
     slug: 'macbook-screen-repair',
     hubHref: '/macbook-repair-melbourne',
+    repairSlug: 'screen-repair',
     hubLabel: 'MacBook Repair Melbourne',
     metaTitle: 'MacBook Screen Repair Melbourne | Retina Display Specialists | iTech Repairs',
     metaDescription: 'MacBook screen repair Melbourne. Retina and Liquid Retina XDR display repair for all MacBook Air and MacBook Pro models. Lifetime warranty. Walk in today.',
@@ -873,12 +815,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'Can you fix the Flexgate issue on older MacBook Pros?', answer: 'Yes. We address the stage-light / Flexgate display cable issue on affected 2016–2019 MacBook Pro models.' },
     ],
     relatedServices: macbookRelated('macbook-screen-repair'),
-    modelLinks: macbookModelLinks('screen-repair'),
   },
 
   {
     slug: 'macbook-battery-replacement',
     hubHref: '/macbook-repair-melbourne',
+    repairSlug: 'battery-replacement',
     hubLabel: 'MacBook Repair Melbourne',
     metaTitle: 'MacBook Battery Replacement Melbourne | All MacBook Models | iTech Repairs',
     metaDescription: 'MacBook battery replacement Melbourne. Restore all-day battery life on all MacBook Air and Pro models. M1, M2, M3, M4, M5, and Intel supported. Lifetime warranty.',
@@ -903,12 +845,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'Will replacing the MacBook battery affect my data?', answer: 'No. MacBook battery replacement does not affect your data, software, or system settings.' },
     ],
     relatedServices: macbookRelated('macbook-battery-replacement'),
-    modelLinks: macbookModelLinks('battery-replacement'),
   },
 
   {
     slug: 'macbook-keyboard-repair',
     hubHref: '/macbook-repair-melbourne',
+    repairSlug: 'keyboard-replacement',
     hubLabel: 'MacBook Repair Melbourne',
     metaTitle: 'MacBook Keyboard Repair Melbourne | Butterfly & Scissor Keys | iTech Repairs',
     metaDescription: 'MacBook keyboard repair Melbourne. Fix stuck, broken, or non-responsive keys on all MacBook models. Butterfly and scissor mechanism keyboards. Lifetime warranty.',
@@ -934,12 +876,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'Do you fix the butterfly keyboard on MacBook Pro 2016–2019?', answer: 'Yes. We replace butterfly keyboard decks on affected MacBook Pro models. The scissor-switch replacement is significantly more reliable.' },
     ],
     relatedServices: macbookRelated('macbook-keyboard-repair'),
-    modelLinks: macbookModelLinks('keyboard-replacement'),
   },
 
   {
     slug: 'macbook-trackpad-repair',
     hubHref: '/macbook-repair-melbourne',
+    repairSlug: 'trackpad-replacement',
     hubLabel: 'MacBook Repair Melbourne',
     metaTitle: 'MacBook Trackpad Repair Melbourne | Force Touch | iTech Repairs',
     metaDescription: 'MacBook trackpad repair Melbourne. Fix cracked, sunken, or unresponsive Force Touch trackpad on all MacBook models. Lifetime warranty. Walk in today.',
@@ -964,12 +906,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'If my trackpad is raised, does my battery also need replacing?', answer: 'A raised trackpad is a strong indicator of a swollen battery beneath. We inspect both in the same visit and will advise if both need attention.' },
     ],
     relatedServices: macbookRelated('macbook-trackpad-repair'),
-    modelLinks: macbookModelLinks('trackpad-replacement'),
   },
 
   {
     slug: 'macbook-water-damage-repair',
     hubHref: '/macbook-repair-melbourne',
+    repairSlug: 'water-damage-repair',
     hubLabel: 'MacBook Repair Melbourne',
     metaTitle: 'MacBook Water Damage Repair Melbourne | Logic Board Specialists | iTech Repairs',
     metaDescription: 'MacBook water damage repair Melbourne. Ultrasonic logic board cleaning, corrosion removal, microsoldering for all MacBook models. Act fast. Lifetime warranty.',
@@ -994,12 +936,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'How long does MacBook water damage repair take?', answer: 'Initial assessment: 30 minutes. Full cleaning and repair: 2–8 hours depending on damage severity. Complex component replacement may take 1–3 days.' },
     ],
     relatedServices: macbookRelated('macbook-water-damage-repair'),
-    modelLinks: macbookModelLinks('water-damage-repair'),
   },
 
   {
     slug: 'macbook-free-device-inspection',
     hubHref: '/macbook-repair-melbourne',
+    repairSlug: 'inspection',
     hubLabel: 'MacBook Repair Melbourne',
     metaTitle: 'Free MacBook Inspection Melbourne | Walk In | iTech Repairs',
     metaDescription: 'Free MacBook inspection in Melbourne. We check screen, battery, keyboard, trackpad, charging, and more. No charge, no obligation. Walk in today.',
@@ -1023,12 +965,12 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'How long does the MacBook inspection take?', answer: '15–30 minutes for a standard inspection. More complex diagnostics may take longer.' },
     ],
     relatedServices: macbookRelated('macbook-free-device-inspection'),
-    modelLinks: macbookModelLinks('diagnostic'),
   },
 
   {
     slug: 'macbook-insurance-damage-report',
     hubHref: '/macbook-repair-melbourne',
+    repairSlug: 'insurance-report',
     hubLabel: 'MacBook Repair Melbourne',
     metaTitle: 'MacBook Insurance Damage Report Melbourne | iTech Repairs',
     metaDescription: 'Professional MacBook insurance damage reports Melbourne. Written assessments for all MacBook models accepted by all major Australian insurers. Walk in today.',
@@ -1050,7 +992,6 @@ export const BRAND_SERVICE_PAGES: BrandServicePageData[] = [
       { question: 'How quickly can I get my MacBook insurance report?', answer: 'Most reports ready within 24–48 hours. Express same-day reports available on request.' },
     ],
     relatedServices: macbookRelated('macbook-insurance-damage-report'),
-    modelLinks: macbookModelLinks('diagnostic'),
   },
 ]
 

@@ -8,8 +8,6 @@ export interface IphoneServicePage {
   benefits: { title: string; desc: string }[]
   faqs: { question: string; answer: string }[]
   relatedServices: { label: string; href: string }[]
-  /** @deprecated Model links are now generated dynamically in IphoneServicePage.tsx from models.ts */
-  modelLinks?: { label: string; href: string }[]
   repairSlug: string
 }
 
@@ -100,16 +98,6 @@ export const IPHONE_SERVICE_PAGES: IphoneServicePage[] = [
       { label: 'iPhone Ghost Touch Repair', href: '/iphone-ghost-touch-repair' },
       { label: 'iPhone Face ID Repair', href: '/iphone-face-id-repair' },
     ],
-    modelLinks: [
-      { label: 'iPhone 17 Pro Max', href: '/iphone-17-pro-max-screen-repair-melbourne' },
-      { label: 'iPhone 17 Pro', href: '/iphone-17-pro-screen-repair-melbourne' },
-      { label: 'iPhone 16 Pro Max', href: '/iphone-16-pro-max-screen-repair-melbourne' },
-      { label: 'iPhone 16 Pro', href: '/iphone-16-pro-screen-repair-melbourne' },
-      { label: 'iPhone 15 Pro Max', href: '/iphone-15-pro-max-screen-repair-melbourne' },
-      { label: 'iPhone 15 Pro', href: '/iphone-15-pro-screen-repair-melbourne' },
-      { label: 'iPhone 14 Pro', href: '/iphone-14-pro-screen-repair-melbourne' },
-      { label: 'iPhone 13', href: '/iphone-13-screen-repair-melbourne' },
-    ],
   },
 
   // -------------------------------------------------------------------------
@@ -196,16 +184,6 @@ export const IPHONE_SERVICE_PAGES: IphoneServicePage[] = [
       { label: 'iPhone Battery Replacement', href: '/iphone-battery-replacement' },
       { label: 'iPhone Face ID Repair', href: '/iphone-face-id-repair' },
     ],
-    modelLinks: [
-      { label: 'iPhone 17 Pro Max', href: '/iphone-17-pro-max-screen-replacement-melbourne' },
-      { label: 'iPhone 17 Pro', href: '/iphone-17-pro-screen-replacement-melbourne' },
-      { label: 'iPhone 16 Pro Max', href: '/iphone-16-pro-max-screen-replacement-melbourne' },
-      { label: 'iPhone 16 Pro', href: '/iphone-16-pro-screen-replacement-melbourne' },
-      { label: 'iPhone 15 Pro Max', href: '/iphone-15-pro-max-screen-replacement-melbourne' },
-      { label: 'iPhone 15 Pro', href: '/iphone-15-pro-screen-replacement-melbourne' },
-      { label: 'iPhone 14 Pro', href: '/iphone-14-pro-screen-replacement-melbourne' },
-      { label: 'iPhone 13', href: '/iphone-13-screen-replacement-melbourne' },
-    ],
   },
 
   // -------------------------------------------------------------------------
@@ -291,19 +269,6 @@ export const IPHONE_SERVICE_PAGES: IphoneServicePage[] = [
       { label: 'iPhone Screen Repair', href: '/iphone-screen-repair' },
       { label: 'Free iPhone Diagnostic', href: '/iphone-diagnostic-service' },
     ],
-    modelLinks: [
-      { label: 'iPhone 13 Pro Battery', href: '/iphone-13-pro-battery-replacement' },
-      { label: 'iPhone 12 Battery', href: '/iphone-12-battery-replacement' },
-      { label: 'iPhone 11 Battery', href: '/iphone-11-battery-replacement' },
-      { label: 'iPhone 17 Pro Max', href: '/iphone-17-pro-max-battery-replacement-melbourne' },
-      { label: 'iPhone 17 Pro', href: '/iphone-17-pro-battery-replacement-melbourne' },
-      { label: 'iPhone 16 Pro Max', href: '/iphone-16-pro-max-battery-replacement-melbourne' },
-      { label: 'iPhone 16 Pro', href: '/iphone-16-pro-battery-replacement-melbourne' },
-      { label: 'iPhone 15 Pro Max', href: '/iphone-15-pro-max-battery-replacement-melbourne' },
-      { label: 'iPhone 15 Pro', href: '/iphone-15-pro-battery-replacement-melbourne' },
-      { label: 'iPhone 14 Pro', href: '/iphone-14-pro-battery-replacement-melbourne' },
-      { label: 'iPhone 13', href: '/iphone-13-battery-replacement-melbourne' },
-    ],
   },
 
   // -------------------------------------------------------------------------
@@ -385,16 +350,6 @@ export const IPHONE_SERVICE_PAGES: IphoneServicePage[] = [
       { label: 'Free iPhone Diagnostic', href: '/iphone-diagnostic-service' },
       { label: 'iPhone Water Damage Repair', href: '/iphone-water-damage-repair' },
     ],
-    modelLinks: [
-      { label: 'iPhone 17 Pro Max', href: '/iphone-17-pro-max-charging-port-repair-melbourne' },
-      { label: 'iPhone 17 Pro', href: '/iphone-17-pro-charging-port-repair-melbourne' },
-      { label: 'iPhone 16 Pro Max', href: '/iphone-16-pro-max-charging-port-repair-melbourne' },
-      { label: 'iPhone 16 Pro', href: '/iphone-16-pro-charging-port-repair-melbourne' },
-      { label: 'iPhone 15 Pro Max', href: '/iphone-15-pro-max-charging-port-repair-melbourne' },
-      { label: 'iPhone 15 Pro', href: '/iphone-15-pro-charging-port-repair-melbourne' },
-      { label: 'iPhone 14 Pro', href: '/iphone-14-pro-charging-port-repair-melbourne' },
-      { label: 'iPhone 13', href: '/iphone-13-charging-port-repair-melbourne' },
-    ],
   },
 
   // -------------------------------------------------------------------------
@@ -467,16 +422,6 @@ export const IPHONE_SERVICE_PAGES: IphoneServicePage[] = [
       { label: 'iPhone Back Cover Repair', href: '/iphone-back-cover-repair' },
       { label: 'iPhone Water Damage Repair', href: '/iphone-water-damage-repair' },
     ],
-    modelLinks: [
-      { label: 'iPhone 17 Pro Max', href: '/iphone-17-pro-max-back-glass-repair-melbourne' },
-      { label: 'iPhone 17 Pro', href: '/iphone-17-pro-back-glass-repair-melbourne' },
-      { label: 'iPhone 16 Pro Max', href: '/iphone-16-pro-max-back-glass-repair-melbourne' },
-      { label: 'iPhone 16 Pro', href: '/iphone-16-pro-back-glass-repair-melbourne' },
-      { label: 'iPhone 15 Pro Max', href: '/iphone-15-pro-max-back-glass-repair-melbourne' },
-      { label: 'iPhone 15 Pro', href: '/iphone-15-pro-back-glass-repair-melbourne' },
-      { label: 'iPhone 14 Pro', href: '/iphone-14-pro-back-glass-repair-melbourne' },
-      { label: 'iPhone 13', href: '/iphone-13-back-glass-repair-melbourne' },
-    ],
   },
 
   // -------------------------------------------------------------------------
@@ -540,16 +485,6 @@ export const IPHONE_SERVICE_PAGES: IphoneServicePage[] = [
       { label: 'iPhone Back Glass Repair', href: '/iphone-back-glass-repair' },
       { label: 'iPhone Screen Repair', href: '/iphone-screen-repair' },
       { label: 'iPhone Volume Button Repair', href: '/iphone-volume-button-repair' },
-    ],
-    modelLinks: [
-      { label: 'iPhone 17 Pro Max', href: '/iphone-17-pro-max-back-cover-replacement-melbourne' },
-      { label: 'iPhone 17 Pro', href: '/iphone-17-pro-back-cover-replacement-melbourne' },
-      { label: 'iPhone 16 Pro Max', href: '/iphone-16-pro-max-back-cover-replacement-melbourne' },
-      { label: 'iPhone 16 Pro', href: '/iphone-16-pro-back-cover-replacement-melbourne' },
-      { label: 'iPhone 15 Pro Max', href: '/iphone-15-pro-max-back-cover-replacement-melbourne' },
-      { label: 'iPhone 15 Pro', href: '/iphone-15-pro-back-cover-replacement-melbourne' },
-      { label: 'iPhone 14 Pro', href: '/iphone-14-pro-back-cover-replacement-melbourne' },
-      { label: 'iPhone 13', href: '/iphone-13-back-cover-replacement-melbourne' },
     ],
   },
 
@@ -632,16 +567,6 @@ export const IPHONE_SERVICE_PAGES: IphoneServicePage[] = [
       { label: 'iPhone Camera Lens Repair', href: '/iphone-camera-lens-repair' },
       { label: 'iPhone Screen Repair', href: '/iphone-screen-repair' },
     ],
-    modelLinks: [
-      { label: 'iPhone 17 Pro Max', href: '/iphone-17-pro-max-rear-camera-replacement-melbourne' },
-      { label: 'iPhone 17 Pro', href: '/iphone-17-pro-rear-camera-replacement-melbourne' },
-      { label: 'iPhone 16 Pro Max', href: '/iphone-16-pro-max-rear-camera-replacement-melbourne' },
-      { label: 'iPhone 16 Pro', href: '/iphone-16-pro-rear-camera-replacement-melbourne' },
-      { label: 'iPhone 15 Pro Max', href: '/iphone-15-pro-max-rear-camera-replacement-melbourne' },
-      { label: 'iPhone 15 Pro', href: '/iphone-15-pro-rear-camera-replacement-melbourne' },
-      { label: 'iPhone 14 Pro', href: '/iphone-14-pro-rear-camera-replacement-melbourne' },
-      { label: 'iPhone 13', href: '/iphone-13-rear-camera-replacement-melbourne' },
-    ],
   },
 
   // -------------------------------------------------------------------------
@@ -710,16 +635,6 @@ export const IPHONE_SERVICE_PAGES: IphoneServicePage[] = [
       { label: 'iPhone Face ID Repair', href: '/iphone-face-id-repair' },
       { label: 'iPhone Screen Repair', href: '/iphone-screen-repair' },
     ],
-    modelLinks: [
-      { label: 'iPhone 17 Pro Max', href: '/iphone-17-pro-max-front-camera-replacement-melbourne' },
-      { label: 'iPhone 17 Pro', href: '/iphone-17-pro-front-camera-replacement-melbourne' },
-      { label: 'iPhone 16 Pro Max', href: '/iphone-16-pro-max-front-camera-replacement-melbourne' },
-      { label: 'iPhone 16 Pro', href: '/iphone-16-pro-front-camera-replacement-melbourne' },
-      { label: 'iPhone 15 Pro Max', href: '/iphone-15-pro-max-front-camera-replacement-melbourne' },
-      { label: 'iPhone 15 Pro', href: '/iphone-15-pro-front-camera-replacement-melbourne' },
-      { label: 'iPhone 14 Pro', href: '/iphone-14-pro-front-camera-replacement-melbourne' },
-      { label: 'iPhone 13', href: '/iphone-13-front-camera-replacement-melbourne' },
-    ],
   },
 
   // -------------------------------------------------------------------------
@@ -787,16 +702,6 @@ export const IPHONE_SERVICE_PAGES: IphoneServicePage[] = [
       { label: 'iPhone Rear Camera Repair', href: '/iphone-rear-camera-repair' },
       { label: 'iPhone Front Camera Repair', href: '/iphone-front-camera-repair' },
       { label: 'iPhone Back Glass Repair', href: '/iphone-back-glass-repair' },
-    ],
-    modelLinks: [
-      { label: 'iPhone 17 Pro Max', href: '/iphone-17-pro-max-camera-lens-replacement-melbourne' },
-      { label: 'iPhone 17 Pro', href: '/iphone-17-pro-camera-lens-replacement-melbourne' },
-      { label: 'iPhone 16 Pro Max', href: '/iphone-16-pro-max-camera-lens-replacement-melbourne' },
-      { label: 'iPhone 16 Pro', href: '/iphone-16-pro-camera-lens-replacement-melbourne' },
-      { label: 'iPhone 15 Pro Max', href: '/iphone-15-pro-max-camera-lens-replacement-melbourne' },
-      { label: 'iPhone 15 Pro', href: '/iphone-15-pro-camera-lens-replacement-melbourne' },
-      { label: 'iPhone 14 Pro', href: '/iphone-14-pro-camera-lens-replacement-melbourne' },
-      { label: 'iPhone 13', href: '/iphone-13-camera-lens-replacement-melbourne' },
     ],
   },
 
@@ -871,16 +776,6 @@ export const IPHONE_SERVICE_PAGES: IphoneServicePage[] = [
       { label: 'iPhone Microphone Repair', href: '/iphone-microphone-repair' },
       { label: 'iPhone Charging Port Repair', href: '/iphone-charging-port-repair' },
     ],
-    modelLinks: [
-      { label: 'iPhone 17 Pro Max', href: '/iphone-17-pro-max-loudspeaker-replacement-melbourne' },
-      { label: 'iPhone 17 Pro', href: '/iphone-17-pro-loudspeaker-replacement-melbourne' },
-      { label: 'iPhone 16 Pro Max', href: '/iphone-16-pro-max-loudspeaker-replacement-melbourne' },
-      { label: 'iPhone 16 Pro', href: '/iphone-16-pro-loudspeaker-replacement-melbourne' },
-      { label: 'iPhone 15 Pro Max', href: '/iphone-15-pro-max-loudspeaker-replacement-melbourne' },
-      { label: 'iPhone 15 Pro', href: '/iphone-15-pro-loudspeaker-replacement-melbourne' },
-      { label: 'iPhone 14 Pro', href: '/iphone-14-pro-loudspeaker-replacement-melbourne' },
-      { label: 'iPhone 13', href: '/iphone-13-loudspeaker-replacement-melbourne' },
-    ],
   },
 
   // -------------------------------------------------------------------------
@@ -948,16 +843,6 @@ export const IPHONE_SERVICE_PAGES: IphoneServicePage[] = [
       { label: 'iPhone Speaker Repair', href: '/iphone-speaker-repair' },
       { label: 'iPhone Microphone Repair', href: '/iphone-microphone-repair' },
       { label: 'iPhone Proximity Sensor Repair', href: '/iphone-proximity-sensor-repair' },
-    ],
-    modelLinks: [
-      { label: 'iPhone 17 Pro Max', href: '/iphone-17-pro-max-earpiece-replacement-melbourne' },
-      { label: 'iPhone 17 Pro', href: '/iphone-17-pro-earpiece-replacement-melbourne' },
-      { label: 'iPhone 16 Pro Max', href: '/iphone-16-pro-max-earpiece-replacement-melbourne' },
-      { label: 'iPhone 16 Pro', href: '/iphone-16-pro-earpiece-replacement-melbourne' },
-      { label: 'iPhone 15 Pro Max', href: '/iphone-15-pro-max-earpiece-replacement-melbourne' },
-      { label: 'iPhone 15 Pro', href: '/iphone-15-pro-earpiece-replacement-melbourne' },
-      { label: 'iPhone 14 Pro', href: '/iphone-14-pro-earpiece-replacement-melbourne' },
-      { label: 'iPhone 13', href: '/iphone-13-earpiece-replacement-melbourne' },
     ],
   },
 
@@ -1032,16 +917,6 @@ export const IPHONE_SERVICE_PAGES: IphoneServicePage[] = [
       { label: 'iPhone Earpiece Repair', href: '/iphone-earpiece-repair' },
       { label: 'iPhone Charging Port Repair', href: '/iphone-charging-port-repair' },
     ],
-    modelLinks: [
-      { label: 'iPhone 17 Pro Max', href: '/iphone-17-pro-max-microphone-replacement-melbourne' },
-      { label: 'iPhone 17 Pro', href: '/iphone-17-pro-microphone-replacement-melbourne' },
-      { label: 'iPhone 16 Pro Max', href: '/iphone-16-pro-max-microphone-replacement-melbourne' },
-      { label: 'iPhone 16 Pro', href: '/iphone-16-pro-microphone-replacement-melbourne' },
-      { label: 'iPhone 15 Pro Max', href: '/iphone-15-pro-max-microphone-replacement-melbourne' },
-      { label: 'iPhone 15 Pro', href: '/iphone-15-pro-microphone-replacement-melbourne' },
-      { label: 'iPhone 14 Pro', href: '/iphone-14-pro-microphone-replacement-melbourne' },
-      { label: 'iPhone 13', href: '/iphone-13-microphone-replacement-melbourne' },
-    ],
   },
 
   // -------------------------------------------------------------------------
@@ -1110,16 +985,6 @@ export const IPHONE_SERVICE_PAGES: IphoneServicePage[] = [
       { label: 'iPhone Vibration Repair', href: '/iphone-vibration-repair' },
       { label: 'iPhone Back Cover Repair', href: '/iphone-back-cover-repair' },
     ],
-    modelLinks: [
-      { label: 'iPhone 17 Pro Max', href: '/iphone-17-pro-max-volume-button-replacement-melbourne' },
-      { label: 'iPhone 17 Pro', href: '/iphone-17-pro-volume-button-replacement-melbourne' },
-      { label: 'iPhone 16 Pro Max', href: '/iphone-16-pro-max-volume-button-replacement-melbourne' },
-      { label: 'iPhone 16 Pro', href: '/iphone-16-pro-volume-button-replacement-melbourne' },
-      { label: 'iPhone 15 Pro Max', href: '/iphone-15-pro-max-volume-button-replacement-melbourne' },
-      { label: 'iPhone 15 Pro', href: '/iphone-15-pro-volume-button-replacement-melbourne' },
-      { label: 'iPhone 14 Pro', href: '/iphone-14-pro-volume-button-replacement-melbourne' },
-      { label: 'iPhone 13', href: '/iphone-13-volume-button-replacement-melbourne' },
-    ],
   },
 
   // -------------------------------------------------------------------------
@@ -1183,16 +1048,6 @@ export const IPHONE_SERVICE_PAGES: IphoneServicePage[] = [
       { label: 'iPhone Volume Button Repair', href: '/iphone-volume-button-repair' },
       { label: 'iPhone Speaker Repair', href: '/iphone-speaker-repair' },
       { label: 'Free iPhone Diagnostic', href: '/iphone-diagnostic-service' },
-    ],
-    modelLinks: [
-      { label: 'iPhone 17 Pro Max', href: '/iphone-17-pro-max-vibrator-replacement-melbourne' },
-      { label: 'iPhone 17 Pro', href: '/iphone-17-pro-vibrator-replacement-melbourne' },
-      { label: 'iPhone 16 Pro Max', href: '/iphone-16-pro-max-vibrator-replacement-melbourne' },
-      { label: 'iPhone 16 Pro', href: '/iphone-16-pro-vibrator-replacement-melbourne' },
-      { label: 'iPhone 15 Pro Max', href: '/iphone-15-pro-max-vibrator-replacement-melbourne' },
-      { label: 'iPhone 15 Pro', href: '/iphone-15-pro-vibrator-replacement-melbourne' },
-      { label: 'iPhone 14 Pro', href: '/iphone-14-pro-vibrator-replacement-melbourne' },
-      { label: 'iPhone 13', href: '/iphone-13-vibrator-replacement-melbourne' },
     ],
   },
 
@@ -1264,25 +1119,6 @@ export const IPHONE_SERVICE_PAGES: IphoneServicePage[] = [
       { label: 'iPhone Face ID Repair', href: '/iphone-face-id-repair' },
       { label: 'iPhone Screen Repair', href: '/iphone-screen-repair' },
     ],
-    modelLinks: [
-      {
-        label: 'iPhone 17 Pro Max',
-        href: '/iphone-17-pro-max-proximity-sensor-replacement-melbourne',
-      },
-      { label: 'iPhone 17 Pro', href: '/iphone-17-pro-proximity-sensor-replacement-melbourne' },
-      {
-        label: 'iPhone 16 Pro Max',
-        href: '/iphone-16-pro-max-proximity-sensor-replacement-melbourne',
-      },
-      { label: 'iPhone 16 Pro', href: '/iphone-16-pro-proximity-sensor-replacement-melbourne' },
-      {
-        label: 'iPhone 15 Pro Max',
-        href: '/iphone-15-pro-max-proximity-sensor-replacement-melbourne',
-      },
-      { label: 'iPhone 15 Pro', href: '/iphone-15-pro-proximity-sensor-replacement-melbourne' },
-      { label: 'iPhone 14 Pro', href: '/iphone-14-pro-proximity-sensor-replacement-melbourne' },
-      { label: 'iPhone 13', href: '/iphone-13-proximity-sensor-replacement-melbourne' },
-    ],
   },
 
   // -------------------------------------------------------------------------
@@ -1350,16 +1186,6 @@ export const IPHONE_SERVICE_PAGES: IphoneServicePage[] = [
       { label: 'iPhone Front Camera Repair', href: '/iphone-front-camera-repair' },
       { label: 'iPhone Screen Repair', href: '/iphone-screen-repair' },
       { label: 'iPhone Proximity Sensor Repair', href: '/iphone-proximity-sensor-repair' },
-    ],
-    modelLinks: [
-      { label: 'iPhone 17 Pro Max', href: '/iphone-17-pro-max-face-id-repair-melbourne' },
-      { label: 'iPhone 17 Pro', href: '/iphone-17-pro-face-id-repair-melbourne' },
-      { label: 'iPhone 16 Pro Max', href: '/iphone-16-pro-max-face-id-repair-melbourne' },
-      { label: 'iPhone 16 Pro', href: '/iphone-16-pro-face-id-repair-melbourne' },
-      { label: 'iPhone 15 Pro Max', href: '/iphone-15-pro-max-face-id-repair-melbourne' },
-      { label: 'iPhone 15 Pro', href: '/iphone-15-pro-face-id-repair-melbourne' },
-      { label: 'iPhone 14 Pro', href: '/iphone-14-pro-face-id-repair-melbourne' },
-      { label: 'iPhone 13', href: '/iphone-13-face-id-repair-melbourne' },
     ],
   },
 
@@ -1429,16 +1255,6 @@ export const IPHONE_SERVICE_PAGES: IphoneServicePage[] = [
       { label: 'iPhone Ghost Touch Repair', href: '/iphone-ghost-touch-repair' },
       { label: 'iPhone Screen Replacement', href: '/iphone-screen-replacement' },
     ],
-    modelLinks: [
-      { label: 'iPhone 17 Pro Max', href: '/iphone-17-pro-max-touch-screen-repair-melbourne' },
-      { label: 'iPhone 17 Pro', href: '/iphone-17-pro-touch-screen-repair-melbourne' },
-      { label: 'iPhone 16 Pro Max', href: '/iphone-16-pro-max-touch-screen-repair-melbourne' },
-      { label: 'iPhone 16 Pro', href: '/iphone-16-pro-touch-screen-repair-melbourne' },
-      { label: 'iPhone 15 Pro Max', href: '/iphone-15-pro-max-touch-screen-repair-melbourne' },
-      { label: 'iPhone 15 Pro', href: '/iphone-15-pro-touch-screen-repair-melbourne' },
-      { label: 'iPhone 14 Pro', href: '/iphone-14-pro-touch-screen-repair-melbourne' },
-      { label: 'iPhone 13', href: '/iphone-13-touch-screen-repair-melbourne' },
-    ],
   },
 
   // -------------------------------------------------------------------------
@@ -1507,16 +1323,6 @@ export const IPHONE_SERVICE_PAGES: IphoneServicePage[] = [
       { label: 'iPhone Screen Repair', href: '/iphone-screen-repair' },
       { label: 'iPhone Touch Screen Repair', href: '/iphone-touchscreen-repair' },
       { label: 'iPhone Screen Replacement', href: '/iphone-screen-replacement' },
-    ],
-    modelLinks: [
-      { label: 'iPhone 17 Pro Max', href: '/iphone-17-pro-max-ghost-touch-repair-melbourne' },
-      { label: 'iPhone 17 Pro', href: '/iphone-17-pro-ghost-touch-repair-melbourne' },
-      { label: 'iPhone 16 Pro Max', href: '/iphone-16-pro-max-ghost-touch-repair-melbourne' },
-      { label: 'iPhone 16 Pro', href: '/iphone-16-pro-ghost-touch-repair-melbourne' },
-      { label: 'iPhone 15 Pro Max', href: '/iphone-15-pro-max-ghost-touch-repair-melbourne' },
-      { label: 'iPhone 15 Pro', href: '/iphone-15-pro-ghost-touch-repair-melbourne' },
-      { label: 'iPhone 14 Pro', href: '/iphone-14-pro-ghost-touch-repair-melbourne' },
-      { label: 'iPhone 13', href: '/iphone-13-ghost-touch-repair-melbourne' },
     ],
   },
 
@@ -1600,16 +1406,6 @@ export const IPHONE_SERVICE_PAGES: IphoneServicePage[] = [
       { label: 'iPhone Data Recovery', href: '/iphone-data-recovery' },
       { label: 'Free iPhone Diagnostic', href: '/iphone-diagnostic-service' },
     ],
-    modelLinks: [
-      { label: 'iPhone 17 Pro Max', href: '/iphone-17-pro-max-water-damage-repair-melbourne' },
-      { label: 'iPhone 17 Pro', href: '/iphone-17-pro-water-damage-repair-melbourne' },
-      { label: 'iPhone 16 Pro Max', href: '/iphone-16-pro-max-water-damage-repair-melbourne' },
-      { label: 'iPhone 16 Pro', href: '/iphone-16-pro-water-damage-repair-melbourne' },
-      { label: 'iPhone 15 Pro Max', href: '/iphone-15-pro-max-water-damage-repair-melbourne' },
-      { label: 'iPhone 15 Pro', href: '/iphone-15-pro-water-damage-repair-melbourne' },
-      { label: 'iPhone 14 Pro', href: '/iphone-14-pro-water-damage-repair-melbourne' },
-      { label: 'iPhone 13', href: '/iphone-13-water-damage-repair-melbourne' },
-    ],
   },
 
   // -------------------------------------------------------------------------
@@ -1688,16 +1484,6 @@ export const IPHONE_SERVICE_PAGES: IphoneServicePage[] = [
       { label: 'Free iPhone Diagnostic', href: '/iphone-diagnostic-service' },
       { label: 'iPhone Screen Repair', href: '/iphone-screen-repair' },
     ],
-    modelLinks: [
-      { label: 'iPhone 17 Pro Max', href: '/iphone-17-pro-max-data-recovery-melbourne' },
-      { label: 'iPhone 17 Pro', href: '/iphone-17-pro-data-recovery-melbourne' },
-      { label: 'iPhone 16 Pro Max', href: '/iphone-16-pro-max-data-recovery-melbourne' },
-      { label: 'iPhone 16 Pro', href: '/iphone-16-pro-data-recovery-melbourne' },
-      { label: 'iPhone 15 Pro Max', href: '/iphone-15-pro-max-data-recovery-melbourne' },
-      { label: 'iPhone 15 Pro', href: '/iphone-15-pro-data-recovery-melbourne' },
-      { label: 'iPhone 14 Pro', href: '/iphone-14-pro-data-recovery-melbourne' },
-      { label: 'iPhone 13', href: '/iphone-13-data-recovery-melbourne' },
-    ],
   },
 
   // -------------------------------------------------------------------------
@@ -1774,16 +1560,6 @@ export const IPHONE_SERVICE_PAGES: IphoneServicePage[] = [
       { label: 'iPhone Water Damage Repair', href: '/iphone-water-damage-repair' },
       { label: 'iPhone Data Recovery', href: '/iphone-data-recovery' },
       { label: 'Free iPhone Diagnostic', href: '/iphone-diagnostic-service' },
-    ],
-    modelLinks: [
-      { label: 'iPhone 17 Pro Max', href: '/iphone-17-pro-max-motherboard-repair-melbourne' },
-      { label: 'iPhone 17 Pro', href: '/iphone-17-pro-motherboard-repair-melbourne' },
-      { label: 'iPhone 16 Pro Max', href: '/iphone-16-pro-max-motherboard-repair-melbourne' },
-      { label: 'iPhone 16 Pro', href: '/iphone-16-pro-motherboard-repair-melbourne' },
-      { label: 'iPhone 15 Pro Max', href: '/iphone-15-pro-max-motherboard-repair-melbourne' },
-      { label: 'iPhone 15 Pro', href: '/iphone-15-pro-motherboard-repair-melbourne' },
-      { label: 'iPhone 14 Pro', href: '/iphone-14-pro-motherboard-repair-melbourne' },
-      { label: 'iPhone 13', href: '/iphone-13-motherboard-repair-melbourne' },
     ],
   },
 
@@ -1871,15 +1647,165 @@ export const IPHONE_SERVICE_PAGES: IphoneServicePage[] = [
       { label: 'iPhone Water Damage Repair', href: '/iphone-water-damage-repair' },
       { label: 'iPhone Motherboard Repair', href: '/iphone-motherboard-repair' },
     ],
-    modelLinks: [
-      { label: 'iPhone 17 Pro Max', href: '/iphone-17-pro-max-diagnostic-melbourne' },
-      { label: 'iPhone 17 Pro', href: '/iphone-17-pro-diagnostic-melbourne' },
-      { label: 'iPhone 16 Pro Max', href: '/iphone-16-pro-max-diagnostic-melbourne' },
-      { label: 'iPhone 16 Pro', href: '/iphone-16-pro-diagnostic-melbourne' },
-      { label: 'iPhone 15 Pro Max', href: '/iphone-15-pro-max-diagnostic-melbourne' },
-      { label: 'iPhone 15 Pro', href: '/iphone-15-pro-diagnostic-melbourne' },
-      { label: 'iPhone 14 Pro', href: '/iphone-14-pro-diagnostic-melbourne' },
-      { label: 'iPhone 13', href: '/iphone-13-diagnostic-melbourne' },
+  },
+
+  // -------------------------------------------------------------------------
+  // 23. iphone-free-device-inspection
+  // -------------------------------------------------------------------------
+  {
+    slug: 'iphone-free-device-inspection',
+    repairSlug: 'inspection',
+    metaTitle: 'Free iPhone Inspection Melbourne | Pre-Purchase Check | No Obligation | iTech Repairs',
+    metaDescription:
+      'Free iPhone inspection in Melbourne. Pre-purchase checks, battery health, iCloud lock status, camera, screen and full hardware assessment. Walk in today — no booking needed.',
+    h1: 'Free iPhone Device Inspection Melbourne',
+    intro:
+      'Buying a second-hand iPhone or want to know your device\'s true condition? Walk in to iTech Repairs for a completely free inspection. We check battery health, screen quality, all cameras, Face ID, speakers, charging, and activation lock status — then give you a plain-English verdict with no obligation to repair.',
+    symptoms: [
+      {
+        title: 'Buying a Second-Hand iPhone',
+        desc: 'Checking a used iPhone before purchase. We verify battery health percentage, screen quality, Face ID function, and whether the device is iCloud-locked.',
+      },
+      {
+        title: 'Not Sure What\'s Wrong',
+        desc: 'Something feels off but you can\'t identify the fault. Our free inspection pinpoints exactly what needs attention.',
+      },
+      {
+        title: 'Want a Repair Quote',
+        desc: 'Need a written quote before committing to a repair? Walk in for a free assessment and written quote with no pressure to proceed.',
+      },
+      {
+        title: 'Insurance or Warranty Check',
+        desc: 'Documenting your iPhone\'s current condition before making an insurance claim or warranty dispute.',
+      },
+      {
+        title: 'General Health Check',
+        desc: 'Your iPhone is aging and you want to know which components are still healthy and what to monitor going forward.',
+      },
+    ],
+    benefits: [
+      {
+        title: 'Completely Free — No Hidden Fees',
+        desc: 'Our iPhone inspection is 100% free. There\'s no charge even if you decide not to proceed with any repair.',
+      },
+      {
+        title: 'Comprehensive Multi-Point Check',
+        desc: 'We check screen quality, battery health, all cameras, Face ID, speakers, microphone, charging port, buttons, and iCloud lock status.',
+      },
+      {
+        title: 'Written Quote Provided',
+        desc: 'You\'ll leave with a clear written quote for any faults found. No hidden charges, no pressure sales.',
+      },
+      {
+        title: 'Walk In Any Time',
+        desc: 'No appointment needed. Visit our Braybrook or Spotswood store any time 7 days 9am–9pm.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Is the iPhone inspection really free?',
+        answer:
+          'Yes, completely free. We check your iPhone and provide a written quote at no cost. There is absolutely no obligation to book a repair.',
+      },
+      {
+        question: 'What do you check during a free iPhone inspection?',
+        answer:
+          'We check battery health percentage, screen and touch response, all cameras, Face ID, speakers, microphone, charging port, physical buttons, and iCloud activation lock status.',
+      },
+      {
+        question: 'How long does the free inspection take?',
+        answer:
+          'A standard iPhone inspection takes 10–15 minutes. More complex diagnostics for intermittent faults may take up to 30 minutes.',
+      },
+      {
+        question: 'Can you check if a second-hand iPhone is iCloud locked?',
+        answer:
+          'Yes. We verify iCloud activation lock status, carrier lock, and overall device health before you commit to a purchase.',
+      },
+    ],
+    relatedServices: [
+      { label: 'iPhone Diagnostic Service', href: '/iphone-diagnostic-service' },
+      { label: 'iPhone Battery Replacement', href: '/iphone-battery-replacement' },
+      { label: 'iPhone Screen Repair', href: '/iphone-screen-repair' },
+      { label: 'iPhone Insurance Report', href: '/iphone-insurance-damage-report' },
+    ],
+  },
+
+  // -------------------------------------------------------------------------
+  // 24. iphone-insurance-damage-report
+  // -------------------------------------------------------------------------
+  {
+    slug: 'iphone-insurance-damage-report',
+    repairSlug: 'insurance-report',
+    metaTitle: 'iPhone Insurance Damage Report Melbourne | Same Visit | iTech Repairs',
+    metaDescription:
+      'Professional iPhone insurance damage reports in Melbourne. Written assessments for all iPhone models, accepted by all major Australian insurers. Walk in today.',
+    h1: 'iPhone Insurance Damage Report Melbourne',
+    intro:
+      'Filing an insurance claim for a damaged iPhone? iTech Repairs provides professional written damage assessments on company letterhead, accepted by all major Australian device insurers. Walk in to our Braybrook or Spotswood store — no appointment needed.',
+    symptoms: [
+      {
+        title: 'Filing an Insurance Claim',
+        desc: 'Your insurer requires a professional damage assessment report from an authorised repairer before approving your claim.',
+      },
+      {
+        title: 'Accidental Damage Documentation',
+        desc: 'Documenting physical damage from a drop, crush, or accident for home and contents or device insurance.',
+      },
+      {
+        title: 'Water Damage Insurance Claim',
+        desc: 'Providing technical evidence of water damage extent and probable cause for an insurance or warranty claim.',
+      },
+      {
+        title: 'Work or Business iPhone Claim',
+        desc: 'Business device insurance requiring a formal technical assessment on company letterhead with IMEI and serial number.',
+      },
+    ],
+    benefits: [
+      {
+        title: 'Professional Letterhead Reports',
+        desc: 'All reports are issued on iTech Repairs letterhead with full technician details and device identification, accepted by all major Australian device insurers.',
+      },
+      {
+        title: 'Detailed Technical Assessment',
+        desc: 'Reports cover all identified damage, probable cause of damage, and itemised repair cost estimates.',
+      },
+      {
+        title: 'Same Visit Assessment',
+        desc: 'Walk in for your assessment. Most reports are ready within 24–48 hours. Express turnaround available on request.',
+      },
+      {
+        title: 'Accepted by All Major Insurers',
+        desc: 'Our reports are accepted by all major Australian device insurers including Woolworths Insurance, Budget Direct, and all major telco insurers.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'What does your iPhone insurance damage report include?',
+        answer:
+          'The report includes a full description of all damage found, the probable cause, device identification details (IMEI/serial), and an itemised cost estimate for all required repairs.',
+      },
+      {
+        question: 'How quickly can I get my iPhone insurance report?',
+        answer:
+          'Most reports are ready within 24–48 hours. Express same-day reports are available for urgent claims — please mention this when you walk in.',
+      },
+      {
+        question: 'Do I need an appointment for the insurance assessment?',
+        answer:
+          'No appointment needed. Walk into our Braybrook or Spotswood store any time 7 days 9am–9pm and we\'ll perform the assessment straight away.',
+      },
+      {
+        question: 'How much does the insurance damage report cost?',
+        answer:
+          'There is a small fee for the written report. Please walk in or call us for current pricing. The assessment itself is performed at the time of the report.',
+      },
+    ],
+    relatedServices: [
+      { label: 'Free iPhone Inspection', href: '/iphone-free-device-inspection' },
+      { label: 'iPhone Diagnostic Service', href: '/iphone-diagnostic-service' },
+      { label: 'iPhone Screen Repair', href: '/iphone-screen-repair' },
+      { label: 'iPhone Water Damage Repair', href: '/iphone-water-damage-repair' },
     ],
   },
 ]
